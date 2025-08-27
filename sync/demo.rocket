@@ -1,0 +1,84 @@
+<sync rows="3200">
+	<tracks>
+		<track name="Cam:Instability">
+			<key interpolation="0" value="0.05" row="0"/>
+		</track>
+		<track name="Cam:Distance">
+			<key interpolation="1" value="5" row="0"/>
+		</track>
+		<track name="Cam:Yaw">
+			<key interpolation="0" value="0" row="0"/>
+		</track>
+		<track name="Cam:Pitch">
+			<key interpolation="0" value="0.1" row="0"/>
+		</track>
+		<track name="Cam:TargetX">
+			<key interpolation="0" value="0" row="0"/>
+		</track>
+		<track name="Cam:TargetY">
+			<key interpolation="0" value="0" row="0"/>
+		</track>
+		<track name="Cam:TargetZ">
+			<key interpolation="1" value="0" row="0"/>
+		</track>
+		<track name="Cam:FOV">
+			<key interpolation="0" value="75" row="0"/>
+		</track>
+		<track name="Cam:ShadowBias"/>
+		<track name="Cam:ShadowRadius"/>
+		<track name="Cam:ShadowNormalBias"/>
+		<track name="General:dofCenter">
+			<key interpolation="0" value="0.025" row="0"/>
+		</track>
+		<track name="General:dofWidth">
+			<key interpolation="0" value="0.1" row="0"/>
+		</track>
+		<track name="PostProc:GlowSamples">
+			<key interpolation="0" value="0" row="0"/>
+		</track>
+		<track name="PostProc:GlowSpread">
+			<key interpolation="0" value="0" row="0"/>
+		</track>
+		<track name="PostProc:GlowIntensity">
+			<key interpolation="0" value="0" row="0"/>
+		</track>
+		<track name="PostProc:Distortion">
+			<key interpolation="0" value="1" row="0"/>
+		</track>
+		<track name="PostProc:Exposure">
+			<key interpolation="0" value="3" row="0"/>
+		</track>
+		<track name="PostProc:ExposureBoom">
+			<key interpolation="0" value="0" row="0"/>
+		</track>
+		<track name="PostProc:Contrast">
+			<key interpolation="0" value="1.5" row="0"/>
+		</track>
+		<track name="PostProc:FadeToBlack">
+			<key interpolation="1" value="0" row="0"/>
+		</track>
+		<track name="PostProc:FadeToWhite">
+			<key interpolation="0" value="0" row="0"/>
+		</track>
+		<track name="PostProc:LensEffect">
+			<key interpolation="0" value="0.1" row="0"/>
+		</track>
+		<track name="PostProc:Shake">
+			<key interpolation="0" value="0" row="0"/>
+		</track>
+		<track name="Light:R">
+			<key interpolation="0" value="1" row="0"/>
+		</track>
+		<track name="Light:G">
+			<key interpolation="0" value="1" row="0"/>
+		</track>
+		<track name="Light:B">
+			<key interpolation="0" value="1" row="0"/>
+		</track>
+		<track name="Light:Y">
+			<key interpolation="0" value="2" row="0"/>
+		</track>
+	</tracks>
+	<bookmarks>
+	</bookmarks>
+</sync>

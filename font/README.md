@@ -1,0 +1,1 @@
+URL: https://fonts.google.com/specimen/Share+Tech+Mono/license
