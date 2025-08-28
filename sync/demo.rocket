@@ -1,84 +1,1543 @@
-<sync rows="3200">
+<sync rows="3840">
 	<tracks>
 		<track name="Cam:Instability">
-			<key interpolation="0" value="0.05" row="0"/>
+			<key row="0" value="0.05" interpolation="0"/>
+			<key row="80" value="0.05" interpolation="0"/>
+			<key row="352" value="0.05" interpolation="1"/>
+			<key row="360" value="0.2" interpolation="0"/>
+			<key row="2296" value="0.2" interpolation="1"/>
+			<key row="2304" value="0" interpolation="0"/>
+			<key row="3560" value="0.2" interpolation="0"/>
+			<key row="3720" value="0.4" interpolation="1"/>
+			<key row="3744" value="0.1" interpolation="0"/>
 		</track>
 		<track name="Cam:Distance">
-			<key interpolation="1" value="5" row="0"/>
+			<key row="0" value="1" interpolation="0"/>
+			<key row="32" value="1" interpolation="0"/>
+			<key row="48" value="2" interpolation="0"/>
+			<key row="64" value="2" interpolation="0"/>
+			<key row="80" value="3" interpolation="0"/>
+			<key row="336" value="3" interpolation="0"/>
+			<key row="360" value="3" interpolation="0"/>
+			<key row="3560" value="3" interpolation="0"/>
 		</track>
 		<track name="Cam:Yaw">
-			<key interpolation="0" value="0" row="0"/>
+			<key row="0" value="20" interpolation="0"/>
+			<key row="32" value="-10" interpolation="0"/>
+			<key row="48" value="-10" interpolation="0"/>
+			<key row="64" value="-20" interpolation="0"/>
+			<key row="80" value="-20" interpolation="0"/>
+			<key row="336" value="-20" interpolation="0"/>
+			<key row="352" value="-20" interpolation="2"/>
+			<key row="360" value="-40" interpolation="0"/>
+			<key row="376" value="-40" interpolation="2"/>
+			<key row="384" value="-70" interpolation="0"/>
+			<key row="400" value="-70" interpolation="2"/>
+			<key row="408" value="0" interpolation="0"/>
+			<key row="3560" value="-20" interpolation="0"/>
 		</track>
 		<track name="Cam:Pitch">
-			<key interpolation="0" value="0.1" row="0"/>
+			<key row="0" value="10" interpolation="0"/>
+			<key row="64" value="5" interpolation="0"/>
+			<key row="80" value="5" interpolation="0"/>
+			<key row="352" value="5" interpolation="2"/>
+			<key row="360" value="-10" interpolation="0"/>
+			<key row="376" value="-10" interpolation="2"/>
+			<key row="384" value="-40" interpolation="0"/>
+			<key row="400" value="-40" interpolation="2"/>
+			<key row="408" value="0" interpolation="0"/>
+			<key row="3560" value="5" interpolation="0"/>
 		</track>
 		<track name="Cam:TargetX">
-			<key interpolation="0" value="0" row="0"/>
+			<key row="0" value="0" interpolation="0"/>
+			<key row="64" value="-1" interpolation="0"/>
+			<key row="80" value="-1" interpolation="0"/>
+			<key row="280" value="-1" interpolation="1"/>
+			<key row="285" value="-0.6" interpolation="0"/>
+			<key row="296" value="-0.6" interpolation="1"/>
+			<key row="300" value="-0.3" interpolation="0"/>
+			<key row="312" value="-0.3" interpolation="1"/>
+			<key row="317" value="0" interpolation="0"/>
+			<key row="360" value="0" interpolation="0"/>
+			<key row="3560" value="-1" interpolation="0"/>
 		</track>
 		<track name="Cam:TargetY">
-			<key interpolation="0" value="0" row="0"/>
+			<key row="0" value="0" interpolation="0"/>
+			<key row="64" value="0" interpolation="0"/>
+			<key row="80" value="0" interpolation="0"/>
+			<key row="3560" value="0" interpolation="0"/>
 		</track>
 		<track name="Cam:TargetZ">
-			<key interpolation="1" value="0" row="0"/>
+			<key row="0" value="0" interpolation="0"/>
+			<key row="80" value="0" interpolation="0"/>
+			<key row="3560" value="0" interpolation="0"/>
 		</track>
 		<track name="Cam:FOV">
-			<key interpolation="0" value="75" row="0"/>
+			<key row="0" value="75" interpolation="0"/>
 		</track>
 		<track name="Cam:ShadowBias"/>
 		<track name="Cam:ShadowRadius"/>
 		<track name="Cam:ShadowNormalBias"/>
 		<track name="General:dofCenter">
-			<key interpolation="0" value="0.025" row="0"/>
+			<key row="0" value="0.025" interpolation="0"/>
 		</track>
 		<track name="General:dofWidth">
-			<key interpolation="0" value="0.1" row="0"/>
+			<key row="0" value="0.1" interpolation="0"/>
 		</track>
 		<track name="PostProc:GlowSamples">
-			<key interpolation="0" value="0" row="0"/>
+			<key row="0" value="20" interpolation="0"/>
+			<key row="2304" value="0" interpolation="0"/>
 		</track>
 		<track name="PostProc:GlowSpread">
-			<key interpolation="0" value="0" row="0"/>
+			<key row="0" value="3" interpolation="0"/>
+			<key row="2304" value="0" interpolation="0"/>
 		</track>
 		<track name="PostProc:GlowIntensity">
-			<key interpolation="0" value="0" row="0"/>
+			<key row="0" value="0.03" interpolation="0"/>
+			<key row="2304" value="0" interpolation="0"/>
 		</track>
 		<track name="PostProc:Distortion">
-			<key interpolation="0" value="1" row="0"/>
+			<key row="0" value="1" interpolation="0"/>
+			<key row="347" value="10" interpolation="0"/>
 		</track>
 		<track name="PostProc:Exposure">
-			<key interpolation="0" value="3" row="0"/>
+			<key row="0" value="3" interpolation="0"/>
+			<key row="2304" value="3" interpolation="0"/>
 		</track>
 		<track name="PostProc:ExposureBoom">
-			<key interpolation="0" value="0" row="0"/>
+			<key row="0" value="0" interpolation="0"/>
+			<key row="288" value="1" interpolation="0"/>
+			<key row="1024" value="2" interpolation="1"/>
+			<key row="1040" value="1" interpolation="0"/>
+			<key row="2304" value="0" interpolation="0"/>
 		</track>
 		<track name="PostProc:Contrast">
-			<key interpolation="0" value="1.5" row="0"/>
+			<key row="0" value="1.5" interpolation="0"/>
+			<key row="544" value="1.5" interpolation="1"/>
+			<key row="548" value="1" interpolation="0"/>
+			<key row="549" value="1.5" interpolation="0"/>
+			<key row="672" value="1.5" interpolation="1"/>
+			<key row="676" value="1" interpolation="0"/>
+			<key row="677" value="1.5" interpolation="0"/>
+			<key row="1024" value="2" interpolation="1"/>
+			<key row="1040" value="1.5" interpolation="0"/>
+			<key row="2304" value="1.5" interpolation="0"/>
 		</track>
 		<track name="PostProc:FadeToBlack">
-			<key interpolation="1" value="0" row="0"/>
+			<key row="0" value="0" interpolation="1"/>
 		</track>
 		<track name="PostProc:FadeToWhite">
-			<key interpolation="0" value="0" row="0"/>
+			<key row="0" value="0" interpolation="0"/>
 		</track>
 		<track name="PostProc:LensEffect">
-			<key interpolation="0" value="0.1" row="0"/>
+			<key row="0" value="0.1" interpolation="0"/>
+			<key row="2304" value="0.1" interpolation="0"/>
 		</track>
 		<track name="PostProc:Shake">
-			<key interpolation="0" value="0" row="0"/>
+			<key row="0" value="0" interpolation="0"/>
+			<key row="464" value="0.02" interpolation="0"/>
+			<key row="467" value="0" interpolation="0"/>
+			<key row="501" value="0.02" interpolation="1"/>
+			<key row="512" value="0" interpolation="0"/>
+			<key row="520" value="0.02" interpolation="1"/>
+			<key row="528" value="0" interpolation="0"/>
+			<key row="544" value="0.02" interpolation="1"/>
+			<key row="548" value="0" interpolation="0"/>
+			<key row="584" value="0.02" interpolation="1"/>
+			<key row="592" value="0" interpolation="0"/>
+			<key row="648" value="0.02" interpolation="1"/>
+			<key row="656" value="0" interpolation="0"/>
+			<key row="672" value="0.02" interpolation="1"/>
+			<key row="676" value="0" interpolation="0"/>
+			<key row="712" value="0.02" interpolation="1"/>
+			<key row="720" value="0" interpolation="0"/>
+			<key row="776" value="0.02" interpolation="1"/>
+			<key row="784" value="0" interpolation="0"/>
+			<key row="800" value="0.02" interpolation="1"/>
+			<key row="808" value="0" interpolation="0"/>
+			<key row="840" value="0.02" interpolation="1"/>
+			<key row="848" value="0" interpolation="0"/>
+			<key row="864" value="0.02" interpolation="1"/>
+			<key row="872" value="0" interpolation="0"/>
+			<key row="904" value="0.02" interpolation="1"/>
+			<key row="912" value="0" interpolation="0"/>
+			<key row="928" value="0.02" interpolation="1"/>
+			<key row="936" value="0" interpolation="0"/>
+			<key row="968" value="0.02" interpolation="1"/>
+			<key row="976" value="0" interpolation="0"/>
+			<key row="992" value="0.02" interpolation="1"/>
+			<key row="1000" value="0" interpolation="0"/>
+			<key row="1024" value="0.05" interpolation="2"/>
+			<key row="1040" value="0" interpolation="0"/>
 		</track>
 		<track name="Light:R">
-			<key interpolation="0" value="1" row="0"/>
+			<key row="0" value="1" interpolation="0"/>
 		</track>
 		<track name="Light:G">
-			<key interpolation="0" value="1" row="0"/>
+			<key row="0" value="1" interpolation="0"/>
 		</track>
 		<track name="Light:B">
-			<key interpolation="0" value="1" row="0"/>
+			<key row="0" value="1" interpolation="0"/>
 		</track>
 		<track name="Light:Y">
-			<key interpolation="0" value="2" row="0"/>
+			<key row="0" value="2" interpolation="0"/>
 		</track>
+		<track name="Intro:slidePlane1">
+			<key row="0" value="0" interpolation="0"/>
+			<key row="64" value="0" interpolation="0"/>
+			<key row="68" value="-5" interpolation="0"/>
+			<key row="75" value="-10" interpolation="0"/>
+			<key row="76" value="-20" interpolation="0"/>
+			<key row="3600" value="8" interpolation="0"/>
+			<key row="3601" value="5.8" interpolation="0"/>
+			<key row="3602" value="8.2" interpolation="0"/>
+			<key row="3603" value="1.8" interpolation="0"/>
+			<key row="3604" value="6.5" interpolation="0"/>
+			<key row="3605" value="6.4" interpolation="0"/>
+			<key row="3606" value="4.7" interpolation="0"/>
+			<key row="3607" value="9" interpolation="0"/>
+			<key row="3608" value="-4.6" interpolation="0"/>
+			<key row="3609" value="-1.8" interpolation="0"/>
+			<key row="3610" value="-7.7" interpolation="0"/>
+			<key row="3611" value="-4.4" interpolation="0"/>
+			<key row="3612" value="2.1" interpolation="0"/>
+			<key row="3613" value="3.6" interpolation="0"/>
+			<key row="3614" value="1.2" interpolation="0"/>
+			<key row="3615" value="8" interpolation="0"/>
+			<key row="3616" value="-4.6" interpolation="0"/>
+			<key row="3617" value="2.9" interpolation="0"/>
+			<key row="3618" value="-7" interpolation="0"/>
+			<key row="3619" value="-6.2" interpolation="0"/>
+			<key row="3620" value="-2.6" interpolation="0"/>
+			<key row="3621" value="7.7" interpolation="0"/>
+			<key row="3622" value="-5.7" interpolation="0"/>
+			<key row="3623" value="-5.5" interpolation="0"/>
+			<key row="3624" value="-3.1" interpolation="0"/>
+			<key row="3625" value="-9.4" interpolation="0"/>
+			<key row="3626" value="5.2" interpolation="0"/>
+			<key row="3627" value="-9.5" interpolation="0"/>
+			<key row="3628" value="1.7" interpolation="0"/>
+			<key row="3629" value="4" interpolation="0"/>
+			<key row="3630" value="8.8" interpolation="0"/>
+			<key row="3631" value="5.5" interpolation="0"/>
+			<key row="3632" value="-6.8" interpolation="0"/>
+			<key row="3633" value="-5.6" interpolation="0"/>
+			<key row="3634" value="5.8" interpolation="0"/>
+			<key row="3635" value="-4.2" interpolation="0"/>
+			<key row="3636" value="7.6" interpolation="0"/>
+			<key row="3637" value="6.9" interpolation="0"/>
+			<key row="3638" value="-0.3" interpolation="0"/>
+			<key row="3639" value="8.4" interpolation="0"/>
+			<key row="3640" value="1.8" interpolation="0"/>
+			<key row="3641" value="0.1" interpolation="0"/>
+			<key row="3642" value="7.1" interpolation="0"/>
+			<key row="3643" value="-3.2" interpolation="0"/>
+			<key row="3644" value="-3.5" interpolation="0"/>
+			<key row="3645" value="8.3" interpolation="0"/>
+			<key row="3646" value="4.2" interpolation="0"/>
+			<key row="3647" value="2.1" interpolation="0"/>
+			<key row="3648" value="4.4" interpolation="0"/>
+			<key row="3649" value="-1.1" interpolation="0"/>
+			<key row="3650" value="3.6" interpolation="0"/>
+			<key row="3651" value="1.4" interpolation="0"/>
+			<key row="3652" value="-4.1" interpolation="0"/>
+			<key row="3653" value="8.1" interpolation="0"/>
+			<key row="3654" value="-9" interpolation="0"/>
+			<key row="3655" value="6.9" interpolation="0"/>
+			<key row="3656" value="-6.1" interpolation="0"/>
+			<key row="3657" value="-4.9" interpolation="0"/>
+			<key row="3658" value="7.2" interpolation="0"/>
+			<key row="3659" value="-1.2" interpolation="0"/>
+			<key row="3660" value="4.1" interpolation="0"/>
+			<key row="3661" value="-8.3" interpolation="0"/>
+			<key row="3662" value="-1.1" interpolation="0"/>
+			<key row="3663" value="6.9" interpolation="0"/>
+			<key row="3664" value="-7.9" interpolation="0"/>
+			<key row="3665" value="-7.2" interpolation="0"/>
+			<key row="3666" value="0.3" interpolation="0"/>
+			<key row="3667" value="1" interpolation="0"/>
+			<key row="3668" value="1.2" interpolation="0"/>
+			<key row="3669" value="2.2" interpolation="0"/>
+			<key row="3670" value="9.2" interpolation="0"/>
+			<key row="3671" value="-7.6" interpolation="0"/>
+			<key row="3672" value="6.3" interpolation="0"/>
+			<key row="3673" value="6.1" interpolation="0"/>
+			<key row="3674" value="3.7" interpolation="0"/>
+			<key row="3675" value="1.6" interpolation="0"/>
+			<key row="3676" value="-5.4" interpolation="0"/>
+			<key row="3677" value="-6.5" interpolation="0"/>
+			<key row="3678" value="2.8" interpolation="0"/>
+			<key row="3679" value="-3.1" interpolation="0"/>
+			<key row="3680" value="9.7" interpolation="0"/>
+			<key row="3681" value="7" interpolation="0"/>
+			<key row="3682" value="-4.5" interpolation="0"/>
+			<key row="3683" value="3.2" interpolation="0"/>
+			<key row="3684" value="-4.6" interpolation="0"/>
+			<key row="3685" value="-0.6" interpolation="0"/>
+			<key row="3686" value="9.9" interpolation="0"/>
+			<key row="3687" value="6.1" interpolation="0"/>
+			<key row="3688" value="-7.3" interpolation="0"/>
+			<key row="3689" value="-8.3" interpolation="0"/>
+			<key row="3690" value="3.7" interpolation="0"/>
+			<key row="3691" value="4.9" interpolation="0"/>
+			<key row="3692" value="-2.4" interpolation="0"/>
+			<key row="3693" value="-9.5" interpolation="0"/>
+			<key row="3694" value="-6.8" interpolation="0"/>
+			<key row="3695" value="10" interpolation="0"/>
+			<key row="3696" value="-7" interpolation="0"/>
+			<key row="3697" value="4.4" interpolation="0"/>
+			<key row="3698" value="7.8" interpolation="0"/>
+			<key row="3699" value="-4.9" interpolation="0"/>
+			<key row="3700" value="6.7" interpolation="0"/>
+			<key row="3701" value="-8.9" interpolation="0"/>
+			<key row="3702" value="9.4" interpolation="0"/>
+			<key row="3703" value="-8.6" interpolation="0"/>
+			<key row="3704" value="4" interpolation="0"/>
+			<key row="3705" value="-3.4" interpolation="0"/>
+			<key row="3706" value="-4.9" interpolation="0"/>
+			<key row="3707" value="1.1" interpolation="0"/>
+			<key row="3708" value="-5.6" interpolation="0"/>
+			<key row="3709" value="8.8" interpolation="0"/>
+			<key row="3710" value="-3" interpolation="0"/>
+			<key row="3711" value="7.3" interpolation="0"/>
+			<key row="3712" value="-8.7" interpolation="0"/>
+			<key row="3713" value="7.2" interpolation="0"/>
+			<key row="3714" value="7" interpolation="0"/>
+			<key row="3715" value="0.6" interpolation="0"/>
+			<key row="3716" value="-3.3" interpolation="0"/>
+			<key row="3717" value="-1.5" interpolation="0"/>
+			<key row="3718" value="-3.8" interpolation="0"/>
+			<key row="3719" value="1.2" interpolation="0"/>
+			<key row="3720" value="-8.3" interpolation="0"/>
+			<key row="3721" value="-5.1" interpolation="0"/>
+			<key row="3722" value="-8.3" interpolation="0"/>
+			<key row="3723" value="-7.4" interpolation="0"/>
+			<key row="3724" value="8.3" interpolation="0"/>
+			<key row="3725" value="7.9" interpolation="0"/>
+			<key row="3726" value="-4.3" interpolation="0"/>
+			<key row="3727" value="-8.3" interpolation="0"/>
+			<key row="3728" value="8.2" interpolation="0"/>
+			<key row="3729" value="0" interpolation="0"/>
+			<key row="3730" value="0.3" interpolation="0"/>
+			<key row="3731" value="7.6" interpolation="0"/>
+			<key row="3732" value="0.3" interpolation="0"/>
+			<key row="3733" value="8" interpolation="0"/>
+			<key row="3734" value="-0.5" interpolation="0"/>
+			<key row="3735" value="4.7" interpolation="0"/>
+		</track>
+		<track name="Intro:slidePlane2">
+			<key row="0" value="0" interpolation="0"/>
+			<key row="64" value="0" interpolation="0"/>
+			<key row="68" value="5" interpolation="0"/>
+			<key row="72" value="5" interpolation="0"/>
+			<key row="75" value="8" interpolation="0"/>
+			<key row="76" value="20" interpolation="0"/>
+			<key row="3600" value="-9.2" interpolation="0"/>
+			<key row="3601" value="7.4" interpolation="0"/>
+			<key row="3602" value="-5.9" interpolation="0"/>
+			<key row="3603" value="-7.7" interpolation="0"/>
+			<key row="3604" value="-8.4" interpolation="0"/>
+			<key row="3605" value="2.8" interpolation="0"/>
+			<key row="3606" value="7.4" interpolation="0"/>
+			<key row="3607" value="8.2" interpolation="0"/>
+			<key row="3608" value="0" interpolation="0"/>
+			<key row="3609" value="6.7" interpolation="0"/>
+			<key row="3610" value="6.5" interpolation="0"/>
+			<key row="3611" value="6" interpolation="0"/>
+			<key row="3612" value="-0.4" interpolation="0"/>
+			<key row="3613" value="5" interpolation="0"/>
+			<key row="3614" value="-6.1" interpolation="0"/>
+			<key row="3615" value="-8.9" interpolation="0"/>
+			<key row="3616" value="-9.5" interpolation="0"/>
+			<key row="3617" value="9.4" interpolation="0"/>
+			<key row="3618" value="8.1" interpolation="0"/>
+			<key row="3619" value="8" interpolation="0"/>
+			<key row="3620" value="-7.3" interpolation="0"/>
+			<key row="3621" value="3" interpolation="0"/>
+			<key row="3622" value="-9.4" interpolation="0"/>
+			<key row="3623" value="-8" interpolation="0"/>
+			<key row="3624" value="-7.3" interpolation="0"/>
+			<key row="3625" value="5" interpolation="0"/>
+			<key row="3626" value="-6.3" interpolation="0"/>
+			<key row="3627" value="-1.8" interpolation="0"/>
+			<key row="3628" value="1.5" interpolation="0"/>
+			<key row="3629" value="-1.1" interpolation="0"/>
+			<key row="3630" value="-9.8" interpolation="0"/>
+			<key row="3631" value="6.1" interpolation="0"/>
+			<key row="3632" value="8.4" interpolation="0"/>
+			<key row="3633" value="-5" interpolation="0"/>
+			<key row="3634" value="4.1" interpolation="0"/>
+			<key row="3635" value="-5.9" interpolation="0"/>
+			<key row="3636" value="7.7" interpolation="0"/>
+			<key row="3637" value="-4.5" interpolation="0"/>
+			<key row="3638" value="6.6" interpolation="0"/>
+			<key row="3639" value="3.2" interpolation="0"/>
+			<key row="3640" value="0.1" interpolation="0"/>
+			<key row="3641" value="-4.3" interpolation="0"/>
+			<key row="3642" value="0" interpolation="0"/>
+			<key row="3643" value="-4.8" interpolation="0"/>
+			<key row="3644" value="-6.4" interpolation="0"/>
+			<key row="3645" value="1.9" interpolation="0"/>
+			<key row="3646" value="2.7" interpolation="0"/>
+			<key row="3647" value="3.4" interpolation="0"/>
+			<key row="3648" value="-2.1" interpolation="0"/>
+			<key row="3649" value="1.8" interpolation="0"/>
+			<key row="3650" value="7.9" interpolation="0"/>
+			<key row="3651" value="1.1" interpolation="0"/>
+			<key row="3652" value="0.7" interpolation="0"/>
+			<key row="3653" value="5.3" interpolation="0"/>
+			<key row="3654" value="0.4" interpolation="0"/>
+			<key row="3655" value="-5.3" interpolation="0"/>
+			<key row="3656" value="0" interpolation="0"/>
+			<key row="3657" value="-1.4" interpolation="0"/>
+			<key row="3658" value="-4.7" interpolation="0"/>
+			<key row="3659" value="-3.8" interpolation="0"/>
+			<key row="3660" value="3.3" interpolation="0"/>
+			<key row="3661" value="-7.8" interpolation="0"/>
+			<key row="3662" value="4.6" interpolation="0"/>
+			<key row="3663" value="4.4" interpolation="0"/>
+			<key row="3664" value="-6.7" interpolation="0"/>
+			<key row="3665" value="-0.3" interpolation="0"/>
+			<key row="3666" value="4.1" interpolation="0"/>
+			<key row="3667" value="-0.7" interpolation="0"/>
+			<key row="3668" value="7" interpolation="0"/>
+			<key row="3669" value="-9.2" interpolation="0"/>
+			<key row="3670" value="-0.6" interpolation="0"/>
+			<key row="3671" value="3.3" interpolation="0"/>
+			<key row="3672" value="-7.2" interpolation="0"/>
+			<key row="3673" value="-6.2" interpolation="0"/>
+			<key row="3674" value="-7.1" interpolation="0"/>
+			<key row="3675" value="-2.3" interpolation="0"/>
+			<key row="3676" value="0.8" interpolation="0"/>
+			<key row="3677" value="4.6" interpolation="0"/>
+			<key row="3678" value="-5.4" interpolation="0"/>
+			<key row="3679" value="-7.6" interpolation="0"/>
+			<key row="3680" value="8.1" interpolation="0"/>
+			<key row="3681" value="-1.1" interpolation="0"/>
+			<key row="3682" value="7.6" interpolation="0"/>
+			<key row="3683" value="-2.8" interpolation="0"/>
+			<key row="3684" value="-3" interpolation="0"/>
+			<key row="3685" value="1.8" interpolation="0"/>
+			<key row="3686" value="4" interpolation="0"/>
+			<key row="3687" value="1.3" interpolation="0"/>
+			<key row="3688" value="1.5" interpolation="0"/>
+			<key row="3689" value="-4" interpolation="0"/>
+			<key row="3690" value="-7.4" interpolation="0"/>
+			<key row="3691" value="-1.9" interpolation="0"/>
+			<key row="3692" value="8.4" interpolation="0"/>
+			<key row="3693" value="-9.5" interpolation="0"/>
+			<key row="3694" value="4.1" interpolation="0"/>
+			<key row="3695" value="-7.6" interpolation="0"/>
+			<key row="3696" value="1" interpolation="0"/>
+			<key row="3697" value="5" interpolation="0"/>
+			<key row="3698" value="9.2" interpolation="0"/>
+			<key row="3699" value="1.4" interpolation="0"/>
+			<key row="3700" value="8.3" interpolation="0"/>
+			<key row="3701" value="7" interpolation="0"/>
+			<key row="3702" value="-4.7" interpolation="0"/>
+			<key row="3703" value="5.9" interpolation="0"/>
+			<key row="3704" value="-8.4" interpolation="0"/>
+			<key row="3705" value="-1.5" interpolation="0"/>
+			<key row="3706" value="9.9" interpolation="0"/>
+			<key row="3707" value="-6.5" interpolation="0"/>
+			<key row="3708" value="8" interpolation="0"/>
+			<key row="3709" value="3" interpolation="0"/>
+			<key row="3710" value="0.6" interpolation="0"/>
+			<key row="3711" value="-3.6" interpolation="0"/>
+			<key row="3712" value="5.3" interpolation="0"/>
+			<key row="3713" value="-0.3" interpolation="0"/>
+			<key row="3714" value="-6.4" interpolation="0"/>
+			<key row="3715" value="7.9" interpolation="0"/>
+			<key row="3716" value="9" interpolation="0"/>
+			<key row="3717" value="5.5" interpolation="0"/>
+			<key row="3718" value="-9" interpolation="0"/>
+			<key row="3719" value="8.1" interpolation="0"/>
+			<key row="3720" value="5.9" interpolation="0"/>
+			<key row="3721" value="-6.2" interpolation="0"/>
+			<key row="3722" value="3.6" interpolation="0"/>
+			<key row="3723" value="-0.7" interpolation="0"/>
+			<key row="3724" value="6.6" interpolation="0"/>
+			<key row="3725" value="-4.6" interpolation="0"/>
+			<key row="3726" value="0.6" interpolation="0"/>
+			<key row="3727" value="-6.3" interpolation="0"/>
+			<key row="3728" value="-8.9" interpolation="0"/>
+			<key row="3729" value="-6" interpolation="0"/>
+			<key row="3730" value="-6.7" interpolation="0"/>
+			<key row="3731" value="4.7" interpolation="0"/>
+			<key row="3732" value="-4.9" interpolation="0"/>
+			<key row="3733" value="8.5" interpolation="0"/>
+			<key row="3734" value="-2.6" interpolation="0"/>
+			<key row="3735" value="-6.4" interpolation="0"/>
+		</track>
+		<track name="Intro:slidePlane3">
+			<key row="0" value="1" interpolation="1"/>
+			<key row="56" value="20" interpolation="0"/>
+			<key row="3600" value="3.4" interpolation="0"/>
+			<key row="3601" value="5" interpolation="0"/>
+			<key row="3602" value="-3.4" interpolation="0"/>
+			<key row="3603" value="-8.1" interpolation="0"/>
+			<key row="3604" value="1" interpolation="0"/>
+			<key row="3605" value="-1.3" interpolation="0"/>
+			<key row="3606" value="-7.3" interpolation="0"/>
+			<key row="3607" value="4.2" interpolation="0"/>
+			<key row="3608" value="0.4" interpolation="0"/>
+			<key row="3609" value="9.5" interpolation="0"/>
+			<key row="3610" value="7" interpolation="0"/>
+			<key row="3611" value="-7.4" interpolation="0"/>
+			<key row="3612" value="5.2" interpolation="0"/>
+			<key row="3613" value="7.6" interpolation="0"/>
+			<key row="3614" value="-0.4" interpolation="0"/>
+			<key row="3615" value="2.1" interpolation="0"/>
+			<key row="3616" value="-9" interpolation="0"/>
+			<key row="3617" value="7.5" interpolation="0"/>
+			<key row="3618" value="-2.5" interpolation="0"/>
+			<key row="3619" value="-1.8" interpolation="0"/>
+			<key row="3620" value="-7.5" interpolation="0"/>
+			<key row="3621" value="3.6" interpolation="0"/>
+			<key row="3622" value="-3.7" interpolation="0"/>
+			<key row="3623" value="-7.6" interpolation="0"/>
+			<key row="3624" value="-3.7" interpolation="0"/>
+			<key row="3625" value="-9.2" interpolation="0"/>
+			<key row="3626" value="4.9" interpolation="0"/>
+			<key row="3627" value="3.5" interpolation="0"/>
+			<key row="3628" value="6.1" interpolation="0"/>
+			<key row="3629" value="-7.6" interpolation="0"/>
+			<key row="3630" value="0.4" interpolation="0"/>
+			<key row="3631" value="8.8" interpolation="0"/>
+			<key row="3632" value="-9.5" interpolation="0"/>
+			<key row="3633" value="3.4" interpolation="0"/>
+			<key row="3634" value="0" interpolation="0"/>
+			<key row="3635" value="-3" interpolation="0"/>
+			<key row="3636" value="6.5" interpolation="0"/>
+			<key row="3637" value="-3.2" interpolation="0"/>
+			<key row="3638" value="-5.6" interpolation="0"/>
+			<key row="3639" value="-3.3" interpolation="0"/>
+			<key row="3640" value="-9.9" interpolation="0"/>
+			<key row="3641" value="-4.3" interpolation="0"/>
+			<key row="3642" value="-6.3" interpolation="0"/>
+			<key row="3643" value="-7.3" interpolation="0"/>
+			<key row="3644" value="-4.6" interpolation="0"/>
+			<key row="3645" value="-6.2" interpolation="0"/>
+			<key row="3646" value="-0.5" interpolation="0"/>
+			<key row="3647" value="9.1" interpolation="0"/>
+			<key row="3648" value="-5.4" interpolation="0"/>
+			<key row="3649" value="-6.1" interpolation="0"/>
+			<key row="3650" value="6.4" interpolation="0"/>
+			<key row="3651" value="-3.5" interpolation="0"/>
+			<key row="3652" value="-3.6" interpolation="0"/>
+			<key row="3653" value="2.4" interpolation="0"/>
+			<key row="3654" value="-4.6" interpolation="0"/>
+			<key row="3655" value="3.3" interpolation="0"/>
+			<key row="3656" value="-8.6" interpolation="0"/>
+			<key row="3657" value="2.3" interpolation="0"/>
+			<key row="3658" value="8.7" interpolation="0"/>
+			<key row="3659" value="-2.7" interpolation="0"/>
+			<key row="3660" value="-6.5" interpolation="0"/>
+			<key row="3661" value="-2.8" interpolation="0"/>
+			<key row="3662" value="-4.1" interpolation="0"/>
+			<key row="3663" value="6.9" interpolation="0"/>
+			<key row="3664" value="-6.3" interpolation="0"/>
+			<key row="3665" value="-9.2" interpolation="0"/>
+			<key row="3666" value="0.1" interpolation="0"/>
+			<key row="3667" value="7" interpolation="0"/>
+			<key row="3668" value="-0.7" interpolation="0"/>
+			<key row="3669" value="-0.7" interpolation="0"/>
+			<key row="3670" value="-3.7" interpolation="0"/>
+			<key row="3671" value="-9.7" interpolation="0"/>
+			<key row="3672" value="6.1" interpolation="0"/>
+			<key row="3673" value="6.3" interpolation="0"/>
+			<key row="3674" value="-1" interpolation="0"/>
+			<key row="3675" value="6" interpolation="0"/>
+			<key row="3676" value="3.2" interpolation="0"/>
+			<key row="3677" value="3.5" interpolation="0"/>
+			<key row="3678" value="-0.2" interpolation="0"/>
+			<key row="3679" value="-9.3" interpolation="0"/>
+			<key row="3680" value="-6.2" interpolation="0"/>
+			<key row="3681" value="6.4" interpolation="0"/>
+			<key row="3682" value="9.9" interpolation="0"/>
+			<key row="3683" value="8.4" interpolation="0"/>
+			<key row="3684" value="-8.5" interpolation="0"/>
+			<key row="3685" value="3.3" interpolation="0"/>
+			<key row="3686" value="-0.2" interpolation="0"/>
+			<key row="3687" value="5" interpolation="0"/>
+			<key row="3688" value="-8.9" interpolation="0"/>
+			<key row="3689" value="4.7" interpolation="0"/>
+			<key row="3690" value="-6.7" interpolation="0"/>
+			<key row="3691" value="-1" interpolation="0"/>
+			<key row="3692" value="4.5" interpolation="0"/>
+			<key row="3693" value="-1.5" interpolation="0"/>
+			<key row="3694" value="1.2" interpolation="0"/>
+			<key row="3695" value="5.9" interpolation="0"/>
+			<key row="3696" value="1.5" interpolation="0"/>
+			<key row="3697" value="7.8" interpolation="0"/>
+			<key row="3698" value="-6.6" interpolation="0"/>
+			<key row="3699" value="3.1" interpolation="0"/>
+			<key row="3700" value="5.7" interpolation="0"/>
+			<key row="3701" value="6.3" interpolation="0"/>
+			<key row="3702" value="9.9" interpolation="0"/>
+			<key row="3703" value="-9.3" interpolation="0"/>
+			<key row="3704" value="-5.9" interpolation="0"/>
+			<key row="3705" value="8.8" interpolation="0"/>
+			<key row="3706" value="-0.6" interpolation="0"/>
+			<key row="3707" value="-7.6" interpolation="0"/>
+			<key row="3708" value="-8.9" interpolation="0"/>
+			<key row="3709" value="-8.8" interpolation="0"/>
+			<key row="3710" value="-7.4" interpolation="0"/>
+			<key row="3711" value="-0.3" interpolation="0"/>
+			<key row="3712" value="3.8" interpolation="0"/>
+			<key row="3713" value="7.9" interpolation="0"/>
+			<key row="3714" value="7.7" interpolation="0"/>
+			<key row="3715" value="0.8" interpolation="0"/>
+			<key row="3716" value="3.6" interpolation="0"/>
+			<key row="3717" value="3.4" interpolation="0"/>
+			<key row="3718" value="6" interpolation="0"/>
+			<key row="3719" value="4" interpolation="0"/>
+			<key row="3720" value="8" interpolation="0"/>
+			<key row="3721" value="5.8" interpolation="0"/>
+			<key row="3722" value="-7.5" interpolation="0"/>
+			<key row="3723" value="7.1" interpolation="0"/>
+			<key row="3724" value="-9" interpolation="0"/>
+			<key row="3725" value="-2.6" interpolation="0"/>
+			<key row="3726" value="-2.3" interpolation="0"/>
+			<key row="3727" value="9" interpolation="0"/>
+			<key row="3728" value="6.9" interpolation="0"/>
+			<key row="3729" value="2.9" interpolation="0"/>
+			<key row="3730" value="-5.2" interpolation="0"/>
+			<key row="3731" value="3.1" interpolation="0"/>
+			<key row="3732" value="-5.9" interpolation="0"/>
+			<key row="3733" value="5.8" interpolation="0"/>
+			<key row="3734" value="-5.8" interpolation="0"/>
+			<key row="3735" value="-8.9" interpolation="0"/>
+		</track>
+		<track name="Intro:xWallVis">
+			<key row="0" value="1" interpolation="0"/>
+			<key row="332" value="0" interpolation="0"/>
+			<key row="3560" value="0" interpolation="0"/>
+			<key row="3580" value="1" interpolation="0"/>
+			<key row="3600" value="1" interpolation="0"/>
+			<key row="3760" value="0" interpolation="0"/>
+		</track>
+		<track name="Intro:t1_vis">
+			<key row="0" value="0" interpolation="0"/>
+			<key row="48" value="1" interpolation="0"/>
+			<key row="336" value="0" interpolation="0"/>
+			<key row="3560" value="0" interpolation="0"/>
+			<key row="3603" value="1" interpolation="0"/>
+			<key row="3800" value="0" interpolation="0"/>
+		</track>
+		<track name="Intro:t2_vis">
+			<key row="0" value="0" interpolation="0"/>
+			<key row="32" value="1" interpolation="0"/>
+			<key row="338" value="0" interpolation="0"/>
+			<key row="3560" value="0" interpolation="0"/>
+			<key row="3600" value="1" interpolation="0"/>
+			<key row="3802" value="0" interpolation="0"/>
+		</track>
+		<track name="Intro:t3_vis">
+			<key row="0" value="0" interpolation="0"/>
+			<key row="16" value="1" interpolation="0"/>
+			<key row="339" value="0" interpolation="0"/>
+			<key row="3560" value="0" interpolation="0"/>
+			<key row="3605" value="1" interpolation="0"/>
+			<key row="3804" value="0" interpolation="0"/>
+		</track>
+		<track name="Intro:t4_vis">
+			<key row="0" value="0" interpolation="0"/>
+			<key row="64" value="1" interpolation="0"/>
+			<key row="344" value="0" interpolation="0"/>
+			<key row="3560" value="0" interpolation="0"/>
+			<key row="3608" value="1" interpolation="0"/>
+			<key row="3796" value="0" interpolation="0"/>
+		</track>
+		<track name="Intro:t5_vis">
+			<key row="0" value="0" interpolation="0"/>
+			<key row="64" value="1" interpolation="0"/>
+			<key row="341" value="0" interpolation="0"/>
+			<key row="3560" value="0" interpolation="0"/>
+			<key row="3611" value="1" interpolation="0"/>
+			<key row="3792" value="0" interpolation="0"/>
+		</track>
+		<track name="Intro:flowPlaneVis">
+			<key row="0" value="0" interpolation="0"/>
+			<key row="136" value="1" interpolation="0"/>
+			<key row="137" value="0" interpolation="0"/>
+			<key row="152" value="1" interpolation="0"/>
+			<key row="154" value="0" interpolation="0"/>
+			<key row="168" value="1" interpolation="0"/>
+			<key row="171" value="0" interpolation="0"/>
+			<key row="184" value="1" interpolation="0"/>
+			<key row="188" value="0" interpolation="0"/>
+			<key row="200" value="1" interpolation="0"/>
+			<key row="205" value="0" interpolation="0"/>
+			<key row="216" value="1" interpolation="0"/>
+			<key row="222" value="0" interpolation="0"/>
+			<key row="232" value="1" interpolation="0"/>
+			<key row="238" value="0" interpolation="0"/>
+			<key row="248" value="1" interpolation="0"/>
+			<key row="254" value="0" interpolation="0"/>
+			<key row="264" value="1" interpolation="0"/>
+			<key row="270" value="0" interpolation="0"/>
+			<key row="280" value="1" interpolation="0"/>
+			<key row="286" value="0" interpolation="0"/>
+			<key row="296" value="1" interpolation="0"/>
+			<key row="302" value="0" interpolation="0"/>
+			<key row="312" value="1" interpolation="0"/>
+			<key row="318" value="0" interpolation="0"/>
+			<key row="3603" value="1" interpolation="0"/>
+			<key row="3604" value="0" interpolation="0"/>
+			<key row="3616" value="1" interpolation="0"/>
+			<key row="3617" value="0" interpolation="0"/>
+			<key row="3628" value="1" interpolation="0"/>
+			<key row="3629" value="0" interpolation="0"/>
+			<key row="3646" value="1" interpolation="0"/>
+			<key row="3647" value="0" interpolation="0"/>
+			<key row="3657" value="1" interpolation="0"/>
+			<key row="3658" value="0" interpolation="0"/>
+			<key row="3659" value="1" interpolation="0"/>
+			<key row="3660" value="0" interpolation="0"/>
+			<key row="3661" value="1" interpolation="0"/>
+			<key row="3662" value="0" interpolation="0"/>
+			<key row="3680" value="1" interpolation="0"/>
+			<key row="3681" value="0" interpolation="0"/>
+			<key row="3720" value="1" interpolation="0"/>
+			<key row="3721" value="0" interpolation="0"/>
+			<key row="3722" value="1" interpolation="0"/>
+			<key row="3723" value="0" interpolation="0"/>
+			<key row="3724" value="1" interpolation="0"/>
+			<key row="3725" value="0" interpolation="0"/>
+			<key row="3726" value="1" interpolation="0"/>
+			<key row="3727" value="0" interpolation="0"/>
+			<key row="3728" value="1" interpolation="0"/>
+			<key row="3729" value="0" interpolation="0"/>
+			<key row="3730" value="1" interpolation="0"/>
+			<key row="3731" value="0" interpolation="0"/>
+		</track>
+		<track name="Intro:slidePlaneVis">
+			<key row="0" value="1" interpolation="0"/>
+			<key row="248" value="0" interpolation="0"/>
+			<key row="3736" value="0" interpolation="0"/>
+		</track>
+		<track name="Sphere:posX">
+			<key row="280" value="0" interpolation="0"/>
+		</track>
+		<track name="Sphere:posY">
+			<key row="280" value="0" interpolation="0"/>
+		</track>
+		<track name="Sphere:posZ">
+			<key row="280" value="0" interpolation="0"/>
+		</track>
+		<track name="Sphere:beatSync">
+			<key row="280" value="0" interpolation="0"/>
+		</track>
+		<track name="Sphere:defFacX">
+			<key row="280" value="0" interpolation="0"/>
+		</track>
+		<track name="Sphere:defFacY">
+			<key row="280" value="0" interpolation="0"/>
+		</track>
+		<track name="Sphere:defFacZ">
+			<key row="280" value="0" interpolation="0"/>
+		</track>
+		<track name="Sphere:defScaX">
+			<key row="280" value="0" interpolation="0"/>
+		</track>
+		<track name="Sphere:defScaY">
+			<key row="280" value="0" interpolation="0"/>
+		</track>
+		<track name="Sphere:defScaZ">
+			<key row="280" value="0" interpolation="0"/>
+		</track>
+		<track name="Sphere:defMovX">
+			<key row="280" value="0" interpolation="0"/>
+		</track>
+		<track name="Sphere:defMovY">
+			<key row="280" value="0" interpolation="0"/>
+		</track>
+		<track name="Sphere:defMovZ">
+			<key row="280" value="0" interpolation="0"/>
+		</track>
+		<track name="Sphere:vis">
+			<key row="280" value="1" interpolation="0"/>
+			<key row="2312" value="0" interpolation="0"/>
+		</track>
+		<track name="Sphere:degX">
+			<key row="280" value="0" interpolation="0"/>
+		</track>
+		<track name="Sphere:degY">
+			<key row="280" value="0" interpolation="0"/>
+		</track>
+		<track name="Sphere:degZ">
+			<key row="280" value="0" interpolation="0"/>
+		</track>
+		<track name="Sphere:scale">
+			<key row="280" value="0" interpolation="1"/>
+			<key row="285" value="0.2" interpolation="0"/>
+			<key row="296" value="0.2" interpolation="2"/>
+			<key row="301" value="0.6" interpolation="0"/>
+			<key row="312" value="0.6" interpolation="2"/>
+			<key row="317" value="1" interpolation="0"/>
+			<key row="2304" value="1" interpolation="1"/>
+			<key row="2312" value="0" interpolation="0"/>
+		</track>
+		<track name="OuterPlane:posX"/>
+		<track name="OuterPlane:posY"/>
+		<track name="OuterPlane:posZ"/>
+		<track name="OuterPlane:0_0_posX"/>
+		<track name="OuterPlane:0_0_posY"/>
+		<track name="OuterPlane:0_0_posZ"/>
+		<track name="OuterPlane:0_1_posX"/>
+		<track name="OuterPlane:0_1_posY"/>
+		<track name="OuterPlane:0_1_posZ"/>
+		<track name="OuterPlane:0_2_posX"/>
+		<track name="OuterPlane:0_2_posY"/>
+		<track name="OuterPlane:0_2_posZ"/>
+		<track name="OuterPlane:0_3_posX"/>
+		<track name="OuterPlane:0_3_posY"/>
+		<track name="OuterPlane:0_3_posZ"/>
+		<track name="OuterPlane:0_4_posX"/>
+		<track name="OuterPlane:0_4_posY"/>
+		<track name="OuterPlane:0_4_posZ"/>
+		<track name="OuterPlane:0_5_posX"/>
+		<track name="OuterPlane:0_5_posY"/>
+		<track name="OuterPlane:0_5_posZ"/>
+		<track name="OuterPlane:1_0_posX"/>
+		<track name="OuterPlane:1_0_posY"/>
+		<track name="OuterPlane:1_0_posZ"/>
+		<track name="OuterPlane:1_1_posX"/>
+		<track name="OuterPlane:1_1_posY"/>
+		<track name="OuterPlane:1_1_posZ"/>
+		<track name="OuterPlane:1_2_posX"/>
+		<track name="OuterPlane:1_2_posY"/>
+		<track name="OuterPlane:1_2_posZ"/>
+		<track name="OuterPlane:1_3_posX"/>
+		<track name="OuterPlane:1_3_posY"/>
+		<track name="OuterPlane:1_3_posZ"/>
+		<track name="OuterPlane:1_4_posX"/>
+		<track name="OuterPlane:1_4_posY"/>
+		<track name="OuterPlane:1_4_posZ"/>
+		<track name="OuterPlane:1_5_posX"/>
+		<track name="OuterPlane:1_5_posY"/>
+		<track name="OuterPlane:1_5_posZ"/>
+		<track name="OuterPlane:2_0_posX"/>
+		<track name="OuterPlane:2_0_posY"/>
+		<track name="OuterPlane:2_0_posZ"/>
+		<track name="OuterPlane:2_1_posX"/>
+		<track name="OuterPlane:2_1_posY"/>
+		<track name="OuterPlane:2_1_posZ"/>
+		<track name="OuterPlane:2_2_posX"/>
+		<track name="OuterPlane:2_2_posY"/>
+		<track name="OuterPlane:2_2_posZ"/>
+		<track name="OuterPlane:2_3_posX"/>
+		<track name="OuterPlane:2_3_posY"/>
+		<track name="OuterPlane:2_3_posZ"/>
+		<track name="OuterPlane:2_4_posX"/>
+		<track name="OuterPlane:2_4_posY"/>
+		<track name="OuterPlane:2_4_posZ"/>
+		<track name="OuterPlane:2_5_posX"/>
+		<track name="OuterPlane:2_5_posY"/>
+		<track name="OuterPlane:2_5_posZ"/>
+		<track name="OuterPlane:3_0_posX"/>
+		<track name="OuterPlane:3_0_posY"/>
+		<track name="OuterPlane:3_0_posZ"/>
+		<track name="OuterPlane:3_1_posX"/>
+		<track name="OuterPlane:3_1_posY"/>
+		<track name="OuterPlane:3_1_posZ"/>
+		<track name="OuterPlane:3_2_posX"/>
+		<track name="OuterPlane:3_2_posY"/>
+		<track name="OuterPlane:3_2_posZ"/>
+		<track name="OuterPlane:3_3_posX"/>
+		<track name="OuterPlane:3_3_posY"/>
+		<track name="OuterPlane:3_3_posZ"/>
+		<track name="OuterPlane:3_4_posX"/>
+		<track name="OuterPlane:3_4_posY"/>
+		<track name="OuterPlane:3_4_posZ"/>
+		<track name="OuterPlane:3_5_posX"/>
+		<track name="OuterPlane:3_5_posY"/>
+		<track name="OuterPlane:3_5_posZ"/>
+		<track name="OuterPlane:degX">
+			<key row="376" value="0" interpolation="1"/>
+			<key row="1024" value="360" interpolation="0"/>
+		</track>
+		<track name="OuterPlane:degY">
+			<key row="376" value="0" interpolation="1"/>
+			<key row="1024" value="500" interpolation="0"/>
+		</track>
+		<track name="OuterPlane:degZ">
+			<key row="376" value="0" interpolation="1"/>
+			<key row="1024" value="300" interpolation="0"/>
+		</track>
+		<track name="OuterPlane:scale">
+			<key row="376" value="0.45" interpolation="0"/>
+		</track>
+		<track name="OuterPlane:0_0_vis">
+			<key row="264" value="0" interpolation="0"/>
+			<key row="376" value="1" interpolation="0"/>
+			<key row="1024" value="0" interpolation="0"/>
+		</track>
+		<track name="OuterPlane:0_1_vis">
+			<key row="264" value="0" interpolation="0"/>
+			<key row="376" value="1" interpolation="0"/>
+			<key row="1021" value="0" interpolation="0"/>
+		</track>
+		<track name="OuterPlane:0_2_vis">
+			<key row="264" value="0" interpolation="0"/>
+		</track>
+		<track name="OuterPlane:0_3_vis">
+			<key row="264" value="0" interpolation="0"/>
+		</track>
+		<track name="OuterPlane:0_4_vis">
+			<key row="264" value="0" interpolation="0"/>
+		</track>
+		<track name="OuterPlane:0_5_vis">
+			<key row="264" value="0" interpolation="0"/>
+		</track>
+		<track name="OuterPlane:1_0_vis">
+			<key row="264" value="0" interpolation="0"/>
+		</track>
+		<track name="OuterPlane:1_1_vis">
+			<key row="264" value="0" interpolation="0"/>
+		</track>
+		<track name="OuterPlane:1_2_vis">
+			<key row="264" value="0" interpolation="0"/>
+		</track>
+		<track name="OuterPlane:1_3_vis">
+			<key row="264" value="0" interpolation="0"/>
+		</track>
+		<track name="OuterPlane:1_4_vis">
+			<key row="264" value="0" interpolation="0"/>
+		</track>
+		<track name="OuterPlane:1_5_vis">
+			<key row="264" value="0" interpolation="0"/>
+		</track>
+		<track name="OuterPlane:2_0_vis">
+			<key row="264" value="0" interpolation="0"/>
+		</track>
+		<track name="OuterPlane:2_1_vis">
+			<key row="264" value="0" interpolation="0"/>
+		</track>
+		<track name="OuterPlane:2_2_vis">
+			<key row="264" value="0" interpolation="0"/>
+		</track>
+		<track name="OuterPlane:2_3_vis">
+			<key row="264" value="0" interpolation="0"/>
+		</track>
+		<track name="OuterPlane:2_4_vis">
+			<key row="264" value="0" interpolation="0"/>
+		</track>
+		<track name="OuterPlane:2_5_vis">
+			<key row="264" value="0" interpolation="0"/>
+		</track>
+		<track name="OuterPlane:3_0_vis">
+			<key row="264" value="0" interpolation="0"/>
+		</track>
+		<track name="OuterPlane:3_1_vis">
+			<key row="264" value="0" interpolation="0"/>
+		</track>
+		<track name="OuterPlane:3_2_vis">
+			<key row="264" value="0" interpolation="0"/>
+		</track>
+		<track name="OuterPlane:3_3_vis">
+			<key row="264" value="0" interpolation="0"/>
+		</track>
+		<track name="OuterPlane:3_4_vis">
+			<key row="264" value="0" interpolation="0"/>
+		</track>
+		<track name="OuterPlane:3_5_vis">
+			<key row="264" value="0" interpolation="0"/>
+		</track>
+		<track name="OuterPlane:0_0_degX"/>
+		<track name="OuterPlane:0_0_degY"/>
+		<track name="OuterPlane:0_0_degZ"/>
+		<track name="OuterPlane:0_0_scale"/>
+		<track name="OuterPlane:0_1_degX">
+			<key row="376" value="90" interpolation="0"/>
+		</track>
+		<track name="OuterPlane:0_1_degY">
+			<key row="376" value="60" interpolation="0"/>
+		</track>
+		<track name="OuterPlane:0_1_degZ">
+			<key row="376" value="90" interpolation="0"/>
+		</track>
+		<track name="OuterPlane:0_1_scale"/>
+		<track name="Cube:0_0_0_beatSync">
+			<key row="2304" value="0" interpolation="0"/>
+		</track>
+		<track name="Cube:0_0_1_beatSync">
+			<key row="2304" value="0" interpolation="0"/>
+		</track>
+		<track name="Cube:0_0_2_beatSync">
+			<key row="2304" value="0" interpolation="0"/>
+		</track>
+		<track name="Cube:0_1_0_beatSync">
+			<key row="2304" value="0" interpolation="0"/>
+		</track>
+		<track name="Cube:0_1_1_beatSync">
+			<key row="2304" value="0" interpolation="0"/>
+		</track>
+		<track name="Cube:0_1_2_beatSync">
+			<key row="2304" value="0" interpolation="0"/>
+		</track>
+		<track name="Cube:0_2_0_beatSync">
+			<key row="2304" value="0" interpolation="0"/>
+		</track>
+		<track name="Cube:0_2_1_beatSync">
+			<key row="2304" value="0" interpolation="0"/>
+		</track>
+		<track name="Cube:0_2_2_beatSync">
+			<key row="2304" value="0" interpolation="0"/>
+		</track>
+		<track name="Cube:1_0_0_beatSync">
+			<key row="2304" value="0" interpolation="0"/>
+		</track>
+		<track name="Cube:1_0_1_beatSync">
+			<key row="2304" value="0" interpolation="0"/>
+		</track>
+		<track name="Cube:1_0_2_beatSync">
+			<key row="2304" value="0" interpolation="0"/>
+		</track>
+		<track name="Cube:1_1_0_beatSync">
+			<key row="2304" value="0" interpolation="0"/>
+		</track>
+		<track name="Cube:1_1_1_beatSync">
+			<key row="2304" value="0" interpolation="0"/>
+		</track>
+		<track name="Cube:1_1_2_beatSync">
+			<key row="2304" value="0" interpolation="0"/>
+		</track>
+		<track name="Cube:1_2_0_beatSync">
+			<key row="2304" value="0" interpolation="0"/>
+		</track>
+		<track name="Cube:1_2_1_beatSync">
+			<key row="2304" value="0" interpolation="0"/>
+		</track>
+		<track name="Cube:1_2_2_beatSync">
+			<key row="2304" value="0" interpolation="0"/>
+		</track>
+		<track name="Cube:2_0_0_beatSync">
+			<key row="2304" value="0" interpolation="0"/>
+		</track>
+		<track name="Cube:2_0_1_beatSync">
+			<key row="2304" value="0" interpolation="0"/>
+		</track>
+		<track name="Cube:2_0_2_beatSync">
+			<key row="2304" value="0" interpolation="0"/>
+		</track>
+		<track name="Cube:2_1_0_beatSync">
+			<key row="2304" value="0" interpolation="0"/>
+		</track>
+		<track name="Cube:2_1_1_beatSync">
+			<key row="2304" value="0" interpolation="0"/>
+		</track>
+		<track name="Cube:2_1_2_beatSync">
+			<key row="2304" value="0" interpolation="0"/>
+		</track>
+		<track name="Cube:2_2_0_beatSync">
+			<key row="2304" value="0" interpolation="0"/>
+		</track>
+		<track name="Cube:2_2_1_beatSync">
+			<key row="2304" value="0" interpolation="0"/>
+		</track>
+		<track name="Cube:2_2_2_beatSync">
+			<key row="2304" value="0" interpolation="0"/>
+		</track>
+		<track name="Cube:vis">
+			<key row="2304" value="1" interpolation="0"/>
+			<key row="3552" value="0" interpolation="0"/>
+		</track>
+		<track name="Cube:0_0_0_vis">
+			<key row="2304" value="1" interpolation="0"/>
+		</track>
+		<track name="Cube:0_0_1_vis">
+			<key row="2304" value="1" interpolation="0"/>
+		</track>
+		<track name="Cube:0_0_2_vis">
+			<key row="2304" value="1" interpolation="0"/>
+		</track>
+		<track name="Cube:0_1_0_vis">
+			<key row="2304" value="1" interpolation="0"/>
+		</track>
+		<track name="Cube:0_1_1_vis">
+			<key row="2304" value="1" interpolation="0"/>
+		</track>
+		<track name="Cube:0_1_2_vis">
+			<key row="2304" value="1" interpolation="0"/>
+		</track>
+		<track name="Cube:0_2_0_vis">
+			<key row="2304" value="1" interpolation="0"/>
+		</track>
+		<track name="Cube:0_2_1_vis">
+			<key row="2304" value="1" interpolation="0"/>
+		</track>
+		<track name="Cube:0_2_2_vis">
+			<key row="2304" value="1" interpolation="0"/>
+		</track>
+		<track name="Cube:1_0_0_vis">
+			<key row="2304" value="1" interpolation="0"/>
+		</track>
+		<track name="Cube:1_0_1_vis">
+			<key row="2304" value="1" interpolation="0"/>
+		</track>
+		<track name="Cube:1_0_2_vis">
+			<key row="2304" value="1" interpolation="0"/>
+		</track>
+		<track name="Cube:1_1_0_vis">
+			<key row="2304" value="1" interpolation="0"/>
+		</track>
+		<track name="Cube:1_1_1_vis">
+			<key row="2304" value="1" interpolation="0"/>
+		</track>
+		<track name="Cube:1_1_2_vis">
+			<key row="2304" value="1" interpolation="0"/>
+		</track>
+		<track name="Cube:1_2_0_vis">
+			<key row="2304" value="1" interpolation="0"/>
+		</track>
+		<track name="Cube:1_2_1_vis">
+			<key row="2304" value="1" interpolation="0"/>
+		</track>
+		<track name="Cube:1_2_2_vis">
+			<key row="2304" value="1" interpolation="0"/>
+		</track>
+		<track name="Cube:2_0_0_vis">
+			<key row="2304" value="1" interpolation="0"/>
+		</track>
+		<track name="Cube:2_0_1_vis">
+			<key row="2304" value="1" interpolation="0"/>
+		</track>
+		<track name="Cube:2_0_2_vis">
+			<key row="2304" value="1" interpolation="0"/>
+		</track>
+		<track name="Cube:2_1_0_vis">
+			<key row="2304" value="1" interpolation="0"/>
+		</track>
+		<track name="Cube:2_1_1_vis">
+			<key row="2304" value="1" interpolation="0"/>
+		</track>
+		<track name="Cube:2_1_2_vis">
+			<key row="2304" value="1" interpolation="0"/>
+		</track>
+		<track name="Cube:2_2_0_vis">
+			<key row="2304" value="1" interpolation="0"/>
+		</track>
+		<track name="Cube:2_2_1_vis">
+			<key row="2304" value="1" interpolation="0"/>
+		</track>
+		<track name="Cube:2_2_2_vis">
+			<key row="2304" value="1" interpolation="0"/>
+		</track>
+		<track name="Cube:posX">
+			<key row="2304" value="0" interpolation="0"/>
+		</track>
+		<track name="Cube:posY">
+			<key row="2304" value="0" interpolation="0"/>
+		</track>
+		<track name="Cube:posZ">
+			<key row="2304" value="0" interpolation="0"/>
+		</track>
+		<track name="Cube:degX">
+			<key row="2304" value="0" interpolation="0"/>
+			<key row="2832" value="0" interpolation="1"/>
+			<key row="2836" value="90" interpolation="0"/>
+			<key row="2840" value="90" interpolation="1"/>
+			<key row="2844" value="0" interpolation="0"/>
+		</track>
+		<track name="Cube:degY">
+			<key row="2304" value="0" interpolation="0"/>
+			<key row="2816" value="0" interpolation="1"/>
+			<key row="2820" value="90" interpolation="0"/>
+			<key row="2824" value="90" interpolation="1"/>
+			<key row="2828" value="180" interpolation="0"/>
+			<key row="2832" value="180" interpolation="1"/>
+			<key row="2836" value="90" interpolation="0"/>
+			<key row="2840" value="90" interpolation="1"/>
+			<key row="2844" value="0" interpolation="0"/>
+		</track>
+		<track name="Cube:degZ">
+			<key row="2304" value="0" interpolation="0"/>
+		</track>
+		<track name="Cube:scale">
+			<key row="2304" value="0" interpolation="1"/>
+			<key row="2312" value="0.5" interpolation="0"/>
+		</track>
+		<track name="Cube:0_0_0_posX"/>
+		<track name="Cube:0_0_0_posY"/>
+		<track name="Cube:0_0_0_posZ"/>
+		<track name="Cube:0_0_0_degX"/>
+		<track name="Cube:0_0_0_degY"/>
+		<track name="Cube:0_0_0_degZ"/>
+		<track name="Cube:0_0_0_scale"/>
+		<track name="Cube:0_0_1_posX"/>
+		<track name="Cube:0_0_1_posY"/>
+		<track name="Cube:0_0_1_posZ"/>
+		<track name="Cube:0_0_1_degX"/>
+		<track name="Cube:0_0_1_degY"/>
+		<track name="Cube:0_0_1_degZ"/>
+		<track name="Cube:0_0_1_scale"/>
+		<track name="Cube:0_0_2_posX"/>
+		<track name="Cube:0_0_2_posY"/>
+		<track name="Cube:0_0_2_posZ"/>
+		<track name="Cube:0_0_2_degX"/>
+		<track name="Cube:0_0_2_degY"/>
+		<track name="Cube:0_0_2_degZ"/>
+		<track name="Cube:0_0_2_scale"/>
+		<track name="Cube:0_1_0_posX"/>
+		<track name="Cube:0_1_0_posY"/>
+		<track name="Cube:0_1_0_posZ"/>
+		<track name="Cube:0_1_0_degX"/>
+		<track name="Cube:0_1_0_degY"/>
+		<track name="Cube:0_1_0_degZ"/>
+		<track name="Cube:0_1_0_scale"/>
+		<track name="Cube:0_1_1_posX"/>
+		<track name="Cube:0_1_1_posY"/>
+		<track name="Cube:0_1_1_posZ"/>
+		<track name="Cube:0_1_1_degX"/>
+		<track name="Cube:0_1_1_degY"/>
+		<track name="Cube:0_1_1_degZ"/>
+		<track name="Cube:0_1_1_scale"/>
+		<track name="Cube:0_1_2_posX"/>
+		<track name="Cube:0_1_2_posY"/>
+		<track name="Cube:0_1_2_posZ"/>
+		<track name="Cube:0_1_2_degX"/>
+		<track name="Cube:0_1_2_degY"/>
+		<track name="Cube:0_1_2_degZ"/>
+		<track name="Cube:0_1_2_scale"/>
+		<track name="Cube:0_2_0_posX"/>
+		<track name="Cube:0_2_0_posY"/>
+		<track name="Cube:0_2_0_posZ"/>
+		<track name="Cube:0_2_0_degX"/>
+		<track name="Cube:0_2_0_degY"/>
+		<track name="Cube:0_2_0_degZ"/>
+		<track name="Cube:0_2_0_scale"/>
+		<track name="Cube:0_2_1_posX"/>
+		<track name="Cube:0_2_1_posY"/>
+		<track name="Cube:0_2_1_posZ"/>
+		<track name="Cube:0_2_1_degX"/>
+		<track name="Cube:0_2_1_degY"/>
+		<track name="Cube:0_2_1_degZ"/>
+		<track name="Cube:0_2_1_scale"/>
+		<track name="Cube:0_2_2_posX"/>
+		<track name="Cube:0_2_2_posY"/>
+		<track name="Cube:0_2_2_posZ"/>
+		<track name="Cube:0_2_2_degX"/>
+		<track name="Cube:0_2_2_degY"/>
+		<track name="Cube:0_2_2_degZ"/>
+		<track name="Cube:0_2_2_scale"/>
+		<track name="Cube:1_0_0_posX"/>
+		<track name="Cube:1_0_0_posY"/>
+		<track name="Cube:1_0_0_posZ"/>
+		<track name="Cube:1_0_0_degX"/>
+		<track name="Cube:1_0_0_degY"/>
+		<track name="Cube:1_0_0_degZ"/>
+		<track name="Cube:1_0_0_scale"/>
+		<track name="Cube:1_0_1_posX"/>
+		<track name="Cube:1_0_1_posY"/>
+		<track name="Cube:1_0_1_posZ"/>
+		<track name="Cube:1_0_1_degX"/>
+		<track name="Cube:1_0_1_degY"/>
+		<track name="Cube:1_0_1_degZ"/>
+		<track name="Cube:1_0_1_scale"/>
+		<track name="Cube:1_0_2_posX"/>
+		<track name="Cube:1_0_2_posY"/>
+		<track name="Cube:1_0_2_posZ"/>
+		<track name="Cube:1_0_2_degX"/>
+		<track name="Cube:1_0_2_degY"/>
+		<track name="Cube:1_0_2_degZ"/>
+		<track name="Cube:1_0_2_scale"/>
+		<track name="Cube:1_1_0_posX"/>
+		<track name="Cube:1_1_0_posY"/>
+		<track name="Cube:1_1_0_posZ"/>
+		<track name="Cube:1_1_0_degX"/>
+		<track name="Cube:1_1_0_degY"/>
+		<track name="Cube:1_1_0_degZ"/>
+		<track name="Cube:1_1_0_scale"/>
+		<track name="Cube:1_1_1_posX"/>
+		<track name="Cube:1_1_1_posY"/>
+		<track name="Cube:1_1_1_posZ"/>
+		<track name="Cube:1_1_1_degX"/>
+		<track name="Cube:1_1_1_degY"/>
+		<track name="Cube:1_1_1_degZ"/>
+		<track name="Cube:1_1_1_scale"/>
+		<track name="Cube:1_1_2_posX"/>
+		<track name="Cube:1_1_2_posY"/>
+		<track name="Cube:1_1_2_posZ"/>
+		<track name="Cube:1_1_2_degX"/>
+		<track name="Cube:1_1_2_degY"/>
+		<track name="Cube:1_1_2_degZ"/>
+		<track name="Cube:1_1_2_scale"/>
+		<track name="Cube:1_2_0_posX"/>
+		<track name="Cube:1_2_0_posY"/>
+		<track name="Cube:1_2_0_posZ"/>
+		<track name="Cube:1_2_0_degX"/>
+		<track name="Cube:1_2_0_degY"/>
+		<track name="Cube:1_2_0_degZ"/>
+		<track name="Cube:1_2_0_scale"/>
+		<track name="Cube:1_2_1_posX"/>
+		<track name="Cube:1_2_1_posY"/>
+		<track name="Cube:1_2_1_posZ"/>
+		<track name="Cube:1_2_1_degX"/>
+		<track name="Cube:1_2_1_degY"/>
+		<track name="Cube:1_2_1_degZ"/>
+		<track name="Cube:1_2_1_scale"/>
+		<track name="Cube:1_2_2_posX"/>
+		<track name="Cube:1_2_2_posY"/>
+		<track name="Cube:1_2_2_posZ"/>
+		<track name="Cube:1_2_2_degX"/>
+		<track name="Cube:1_2_2_degY"/>
+		<track name="Cube:1_2_2_degZ"/>
+		<track name="Cube:1_2_2_scale"/>
+		<track name="Cube:2_0_0_posX"/>
+		<track name="Cube:2_0_0_posY"/>
+		<track name="Cube:2_0_0_posZ"/>
+		<track name="Cube:2_0_0_degX"/>
+		<track name="Cube:2_0_0_degY"/>
+		<track name="Cube:2_0_0_degZ"/>
+		<track name="Cube:2_0_0_scale"/>
+		<track name="Cube:2_0_1_posX"/>
+		<track name="Cube:2_0_1_posY"/>
+		<track name="Cube:2_0_1_posZ"/>
+		<track name="Cube:2_0_1_degX"/>
+		<track name="Cube:2_0_1_degY"/>
+		<track name="Cube:2_0_1_degZ"/>
+		<track name="Cube:2_0_1_scale"/>
+		<track name="Cube:2_0_2_posX"/>
+		<track name="Cube:2_0_2_posY"/>
+		<track name="Cube:2_0_2_posZ"/>
+		<track name="Cube:2_0_2_degX"/>
+		<track name="Cube:2_0_2_degY"/>
+		<track name="Cube:2_0_2_degZ"/>
+		<track name="Cube:2_0_2_scale"/>
+		<track name="Cube:2_1_0_posX"/>
+		<track name="Cube:2_1_0_posY"/>
+		<track name="Cube:2_1_0_posZ"/>
+		<track name="Cube:2_1_0_degX"/>
+		<track name="Cube:2_1_0_degY"/>
+		<track name="Cube:2_1_0_degZ"/>
+		<track name="Cube:2_1_0_scale"/>
+		<track name="Cube:2_1_1_posX"/>
+		<track name="Cube:2_1_1_posY"/>
+		<track name="Cube:2_1_1_posZ"/>
+		<track name="Cube:2_1_1_degX"/>
+		<track name="Cube:2_1_1_degY"/>
+		<track name="Cube:2_1_1_degZ"/>
+		<track name="Cube:2_1_1_scale"/>
+		<track name="Cube:2_1_2_posX"/>
+		<track name="Cube:2_1_2_posY"/>
+		<track name="Cube:2_1_2_posZ"/>
+		<track name="Cube:2_1_2_degX"/>
+		<track name="Cube:2_1_2_degY"/>
+		<track name="Cube:2_1_2_degZ"/>
+		<track name="Cube:2_1_2_scale"/>
+		<track name="Cube:2_2_0_posX"/>
+		<track name="Cube:2_2_0_posY"/>
+		<track name="Cube:2_2_0_posZ"/>
+		<track name="Cube:2_2_0_degX"/>
+		<track name="Cube:2_2_0_degY"/>
+		<track name="Cube:2_2_0_degZ"/>
+		<track name="Cube:2_2_0_scale"/>
+		<track name="Cube:2_2_1_posX"/>
+		<track name="Cube:2_2_1_posY"/>
+		<track name="Cube:2_2_1_posZ"/>
+		<track name="Cube:2_2_1_degX"/>
+		<track name="Cube:2_2_1_degY"/>
+		<track name="Cube:2_2_1_degZ"/>
+		<track name="Cube:2_2_1_scale"/>
+		<track name="Cube:2_2_2_posX"/>
+		<track name="Cube:2_2_2_posY"/>
+		<track name="Cube:2_2_2_posZ"/>
+		<track name="Cube:2_2_2_degX"/>
+		<track name="Cube:2_2_2_degY"/>
+		<track name="Cube:2_2_2_degZ"/>
+		<track name="Cube:2_2_2_scale"/>
+		<track name="OuterText:beatSync">
+			<key row="2432" value="0" interpolation="0"/>
+		</track>
+		<track name="OuterText:vis">
+			<key row="2431" value="0" interpolation="0"/>
+			<key row="2432" value="1" interpolation="0"/>
+		</track>
+		<track name="OuterText:0_0_vis">
+			<key row="2432" value="0" interpolation="0"/>
+		</track>
+		<track name="OuterText:1_1_vis">
+			<key row="2432" value="1" interpolation="0"/>
+		</track>
+		<track name="OuterText:2_2_vis">
+			<key row="2432" value="1" interpolation="0"/>
+		</track>
+		<track name="OuterText:3_3_vis">
+			<key row="2432" value="1" interpolation="0"/>
+		</track>
+		<track name="OuterText:4_4_vis">
+			<key row="2432" value="1" interpolation="0"/>
+		</track>
+		<track name="OuterText:5_5_vis">
+			<key row="2432" value="1" interpolation="0"/>
+		</track>
+		<track name="OuterText:0_6_vis">
+			<key row="2432" value="1" interpolation="0"/>
+		</track>
+		<track name="OuterText:1_7_vis">
+			<key row="2432" value="0" interpolation="0"/>
+		</track>
+		<track name="OuterText:2_8_vis">
+			<key row="2432" value="0" interpolation="0"/>
+		</track>
+		<track name="OuterText:3_9_vis">
+			<key row="2432" value="0" interpolation="0"/>
+		</track>
+		<track name="OuterText:4_10_vis">
+			<key row="2432" value="0" interpolation="0"/>
+		</track>
+		<track name="OuterText:5_11_vis">
+			<key row="2432" value="0" interpolation="0"/>
+		</track>
+		<track name="OuterText:0_12_vis">
+			<key row="2432" value="0" interpolation="0"/>
+		</track>
+		<track name="OuterText:1_13_vis">
+			<key row="2432" value="0" interpolation="0"/>
+		</track>
+		<track name="OuterText:2_14_vis">
+			<key row="2432" value="0" interpolation="0"/>
+		</track>
+		<track name="OuterText:3_15_vis">
+			<key row="2432" value="0" interpolation="0"/>
+		</track>
+		<track name="OuterText:4_16_vis">
+			<key row="2432" value="0" interpolation="0"/>
+		</track>
+		<track name="OuterText:5_17_vis">
+			<key row="2432" value="0" interpolation="0"/>
+		</track>
+		<track name="OuterText:posX">
+			<key row="2432" value="0" interpolation="0"/>
+		</track>
+		<track name="OuterText:posY">
+			<key row="2432" value="0" interpolation="0"/>
+		</track>
+		<track name="OuterText:posZ">
+			<key row="2432" value="0" interpolation="0"/>
+		</track>
+		<track name="OuterText:degX">
+			<key row="2432" value="0" interpolation="0"/>
+		</track>
+		<track name="OuterText:degY">
+			<key row="2432" value="0" interpolation="0"/>
+		</track>
+		<track name="OuterText:degZ">
+			<key row="2432" value="0" interpolation="0"/>
+		</track>
+		<track name="OuterText:scale">
+			<key row="2432" value="1" interpolation="0"/>
+		</track>
+		<track name="OuterText:0_degX"/>
+		<track name="OuterText:0_degY"/>
+		<track name="OuterText:0_degZ"/>
+		<track name="OuterText:sideScaleX"/>
+		<track name="OuterText:sideScaleY"/>
+		<track name="OuterText:1_degX"/>
+		<track name="OuterText:1_degY"/>
+		<track name="OuterText:1_degZ"/>
+		<track name="OuterText:2_degX"/>
+		<track name="OuterText:2_degY"/>
+		<track name="OuterText:2_degZ"/>
+		<track name="OuterText:3_degX"/>
+		<track name="OuterText:3_degY"/>
+		<track name="OuterText:3_degZ"/>
+		<track name="OuterText:4_degX"/>
+		<track name="OuterText:4_degY"/>
+		<track name="OuterText:4_degZ"/>
+		<track name="OuterText:5_degX"/>
+		<track name="OuterText:5_degY"/>
+		<track name="OuterText:5_degZ"/>
+		<track name="Background:cubeVisible">
+			<key row="2296" value="0" interpolation="0"/>
+			<key row="2304" value="1" interpolation="0"/>
+			<key row="3552" value="0" interpolation="0"/>
+		</track>
+		<track name="Background:scale">
+			<key row="2304" value="0" interpolation="1"/>
+			<key row="2312" value="1" interpolation="0"/>
+		</track>
+		<track name="Background:cubeScale">
+			<key row="2304" value="0" interpolation="0"/>
+			<key row="2307" value="0.5" interpolation="1"/>
+			<key row="2316" value="1" interpolation="0"/>
+		</track>
+		<track name="Background:interpolateX"/>
+		<track name="Background:interpolateY"/>
+		<track name="Background:interpolateZ"/>
+		<track name="Background:skyColor">
+			<key row="272" value="0" interpolation="0"/>
+			<key row="280" value="0" interpolation="1"/>
+			<key row="288" value="0.35" interpolation="0"/>
+			<key row="336" value="0.45" interpolation="0"/>
+		</track>
+		<track name="Background:posX"/>
+		<track name="Background:posY"/>
+		<track name="Background:posZ"/>
+		<track name="Background:degX"/>
+		<track name="Background:degY"/>
+		<track name="Background:degZ"/>
+		<track name="Laser:vis"/>
+		<track name="Tunnel:vis">
+			<key row="0" value="0" interpolation="0"/>
+			<key row="1024" value="1" interpolation="0"/>
+			<key row="2320" value="0" interpolation="0"/>
+		</track>
+		<track name="Tunnel:t1vis">
+			<key row="0" value="0" interpolation="0"/>
+			<key row="1024" value="1" interpolation="0"/>
+			<key row="1512" value="0" interpolation="0"/>
+			<key row="1513" value="1" interpolation="0"/>
+			<key row="1514" value="0" interpolation="0"/>
+			<key row="1515" value="1" interpolation="0"/>
+			<key row="1516" value="0" interpolation="0"/>
+			<key row="1517" value="1" interpolation="0"/>
+			<key row="1518" value="0" interpolation="0"/>
+			<key row="1519" value="1" interpolation="0"/>
+			<key row="1520" value="0" interpolation="0"/>
+			<key row="1521" value="1" interpolation="0"/>
+			<key row="1522" value="0" interpolation="0"/>
+			<key row="1523" value="1" interpolation="0"/>
+			<key row="1524" value="0" interpolation="0"/>
+			<key row="1525" value="1" interpolation="0"/>
+			<key row="1526" value="0" interpolation="0"/>
+			<key row="1527" value="1" interpolation="0"/>
+			<key row="2320" value="0" interpolation="0"/>
+		</track>
+		<track name="Tunnel:posX"/>
+		<track name="Tunnel:posY"/>
+		<track name="Tunnel:posZ"/>
+		<track name="Tunnel:degX"/>
+		<track name="Tunnel:degY"/>
+		<track name="Tunnel:degZ">
+			<key row="1504" value="0" interpolation="1"/>
+			<key row="1528" value="360" interpolation="1"/>
+			<key row="1536" value="0" interpolation="2"/>
+			<key row="1552" value="900" interpolation="0"/>
+			<key row="1553" value="0" interpolation="0"/>
+		</track>
+		<track name="Tunnel:scale">
+			<key row="1016" value="0" interpolation="2"/>
+			<key row="1036" value="1" interpolation="0"/>
+			<key row="1504" value="1" interpolation="1"/>
+			<key row="1512" value="0.05" interpolation="0"/>
+			<key row="1536" value="0.05" interpolation="2"/>
+			<key row="1552" value="1" interpolation="0"/>
+			<key row="2304" value="1" interpolation="1"/>
+			<key row="2320" value="0" interpolation="0"/>
+		</track>
+		<track name="Particle:vis"/>
 	</tracks>
 	<bookmarks>
+		<bookmark row="0"/>
+		<bookmark row="336"/>
+		<bookmark row="376"/>
+		<bookmark row="1024"/>
+		<bookmark row="2304"/>
+		<bookmark row="2816"/>
+		<bookmark row="3560"/>
+		<bookmark row="3808"/>
 	</bookmarks>
 </sync>

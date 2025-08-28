@@ -1,11 +1,11 @@
 Demo.prototype.addEffectBackground = function () {
   const addPlasmaSkysphere = () => {
   const angle = 0.0;
-  const skyColor = 0.02;
+  const skyColor = 0.3;
   this.loader.addAnimation({
     object: 'multiSceneEffects/tex_milky_way.png',
     shape: { type: 'SKYSPHERE' },
-    color: [{ r: skyColor, g: skyColor, b: skyColor }],
+    //color: [{ r: skyColor, g: skyColor, b: skyColor }],
     "angle":[{
       "degreesX":angle, degreesZ:0
       }],
@@ -18,6 +18,7 @@ Demo.prototype.addEffectBackground = function () {
       `,
       fragmentShaderPrefix:`
         uniform float time;
+        uniform float skyColor;
         //uniform vec4 color;
 void drawSphereEffect()
 {
@@ -56,14 +57,20 @@ void drawSphereEffect()
   finalColor *= brightness;
 
   gl_FragColor = vec4(min(finalColor * (textureBlend*2.0), vec3(1.0)), 1.0);
-  gl_FragColor.rgb *= ${skyColor};
-  gl_FragColor.rbg *= 0.2;
+  gl_FragColor.rgb *= skyColor;
+}
+void adjustBrightness() {
+  gl_FragColor.rgb *= skyColor;
 }
       `,
       fragmentShaderSuffix:`
 
       //drawSphereEffect();
-      `
+      adjustBrightness();
+      `,
+      variable: [
+        {name: 'skyColor', value: [()=>Sync.get('Background:skyColor', skyColor)]},
+      ]
     }
   });
   };

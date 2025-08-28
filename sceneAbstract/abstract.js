@@ -204,7 +204,7 @@ void discarder() {
             gl_FragColor.rgb *= 0.8;
         }
 
-        if (rand() < 0.15) {
+        if (rand() < 0.02) {
           discard;
         }
 }`;
@@ -217,6 +217,7 @@ Demo.prototype.addEffectOuterText = function (options) {
   this.loader.addAnimation({
     object:null,
     id: id,
+    parent: 'cube',
     visible: () => Sync.get('OuterText:vis', 0) < 1 ? false : true,
     scale:{
       uniform3d: () => Sync.get('OuterText:scale', 1.0)
@@ -433,7 +434,7 @@ Demo.prototype.addEffectOuterPlanes = function () {
         position: {
           x:Sync.get(syncPrefix + 'posX', -0.0),
           y:Sync.get(syncPrefix + 'posY', -0.0),
-          z:Sync.get(syncPrefix + 'posZ', -0.5*i+1.25)
+          z:Sync.get(syncPrefix + 'posZ', -0.0)
         },
         angle: {
           degreesX: ()=>Sync.get(syncPrefix + 'degX', 0.0),
@@ -767,13 +768,13 @@ return;
 };
 
 Demo.prototype.sceneAbstract = function () {
-  //this.setScene('abstract');
+  this.setScene('abstract');
   //this.setScene('main');
 //return;
   this.loader.addAnimation({
     "light": {
         "type": "Ambient",
-        "properties": { "intensity": 0.1 },
+        "properties": { "intensity": 1.0 },
     }
   });
 

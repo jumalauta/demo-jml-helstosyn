@@ -28,8 +28,8 @@ window.camNear = 0.0;
 window.camFar = 0.0;
 window.globalTime = 0.0;
 
-//includeFile('multiSceneEffects/PostProcess.js');
-//includeFile('multiSceneEffects/dof.js');
+includeFile('multiSceneEffects/PostProcess.js');
+includeFile('multiSceneEffects/dof.js');
 //includeFile('multiSceneEffects/EffectExplosion.js');
 //includeFile('multiSceneEffects/particleStream.js');
 //includeFile('multiSceneEffects/EffectStarfield.js');
@@ -114,7 +114,7 @@ Demo.prototype.cameraSetup = function (stopCamAt) {
         }
   });       
 
-  this.loader.addAnimation({
+  /*this.loader.addAnimation({
       "light": {
           "type": "Directional",
           "properties": { "intensity": 1.0 },
@@ -130,7 +130,7 @@ Demo.prototype.cameraSetup = function (stopCamAt) {
       ,"color": [{
           "r": ()=>Sync.get('Light:R'), "g": ()=>Sync.get('Light:G'), "b": ()=>Sync.get('Light:B')
       }]
-  });   
+  });   */
 
 };
 
@@ -168,14 +168,14 @@ settings.demo.fbo.color.texture.magFilter = 'NearestFilter';
 Demo.prototype.init = function () {
   const start = 0;
   const duration = 380;
-  const bpm = 126;
+  const bpm = 135;
   const beat = 60/bpm;
   const pattern = beat*8;
 
   //this.loader.addAnimation({image:'_embedded/defaultWhite.png'});
   //return;
   this.sceneAbstract();
-  //this.sceneIntro();
+  this.sceneIntro();
 
   //this.addSongTitle();
   //this.addSmileys();
@@ -185,7 +185,7 @@ Demo.prototype.init = function () {
     shader:{name:'vignette.fs'}
   });*/
 
-  return;
+  //return;
 
   /*this.sceneIntro();
   this.sceneAgod();
@@ -204,7 +204,9 @@ Demo.prototype.init = function () {
   this.loader.setScene('main');
 
   const scenes = [ 
-    {start: 0*window.pattern, duration: 15*window.pattern, name: 'abstract', dof:false, polaroid:false},
+    {start: 4*window.pattern, duration: 51*window.pattern, name: 'abstract', dof:false, polaroid:false},
+    {start: 0*window.pattern, duration: 5*window.pattern, name: 'intro', dof:false, polaroid:false},
+    {start: 52.0*window.pattern, duration: 4*window.pattern, name: 'intro', dof:false, polaroid:false},
     //{start: 0*window.pattern, duration: 9.25*window.pattern, name: 'intro', dof:true, polaroid:false},
     //{start: 9.25*window.pattern, duration: 4*window.pattern, name: 'angered', dof:true, polaroid:false},
     //{start: 13.25*window.pattern, duration: 2*window.pattern, name: 'agod', dof:true, polaroid:false},
