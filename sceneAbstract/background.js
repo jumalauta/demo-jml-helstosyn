@@ -101,7 +101,7 @@ Demo.prototype.addEffectSurrounding = function () {
       //depthWrite:false,
       envMap: 'cube1.cube.map',
       bumpMap: 'sceneAbstract/bumpmap2.png',
-      bumpScale: 5.0
+      bumpScale: 3.0
     },
     shape: {
         type: 'CUBE',
@@ -219,7 +219,7 @@ Demo.prototype.addEffectSurrounding = function () {
             //depthWrite:false,
             envMap: 'cube1.cube.map',
             bumpMap: 'sceneAbstract/bumpmap.png',
-            bumpScale: 6.0
+            bumpScale: 4.0
         },
         shape: {
             type: 'CUBE',

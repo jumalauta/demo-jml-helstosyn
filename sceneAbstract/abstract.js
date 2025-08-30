@@ -51,7 +51,7 @@ Demo.prototype.addEffectParticleShape = function ()
 {
   const amountOfParticles = 200;
   const texture = 'multiSceneEffects/tex_darkParticle.png';
-  const particleSize = 3.0;
+  const particleSize = 0.1;
   const x = 0;
   const y = 0;
   let z = 0;
@@ -89,7 +89,7 @@ Demo.prototype.addEffectParticleShape = function ()
     };*/
 
     // Cube shape
-
+/*
     const direction = [
       Utils.random()*radius-radius/2,
       Utils.random()*radius-radius/2,
@@ -109,11 +109,11 @@ Demo.prototype.addEffectParticleShape = function ()
         a: 1.0//Utils.random()
       }
     };
-
+*/
     // Sphere shape
-    /*const theta = Utils.random() * Math.PI * 2;
+    const theta = Utils.random() * Math.PI * 2;
     const phi = Utils.random() * Math.PI;
-    const r = radius;// * Math.cbrt(Utils.random());
+    const r = radius/2 + radius/2*Utils.random();
 
     particles[i] = {
       x: r * Math.sin(phi) * Math.cos(theta),
@@ -125,7 +125,7 @@ Demo.prototype.addEffectParticleShape = function ()
         b: 1.0,
         a: 1.0
       }
-    };*/
+    };
 
     // Disc shape
 
@@ -153,22 +153,22 @@ Demo.prototype.addEffectParticleShape = function ()
     "image": texture,
     //textureProperties: [{},{minFilter: 'NearestMipmapNearestFilter', magFilter: 'LinearFilter'}],
     //"parent":parentId,
-    visible: () => Sync.get('Particle:vis', 0) < 1 ? false : true,
+    visible: () => Sync.get('Particle:vis2', 1) < 1 ? false : true,
     "position":[{
       "x":x,
       "y":y,
       "z":z,
     }],
-    "angle":[{"degreesY":180,degreesZ:()=>getSceneTimeFromStart()*500.0}],
+    "angle":[{"degreesY":()=>getSceneTimeFromStart()*3.0,degreesX:()=>getSceneTimeFromStart()*4.7,degreesZ:()=>getSceneTimeFromStart()*4.0}],
     "perspective": "3d",
     "billboard": true,
     "additive": true,
     "material":{
-      "blending": 'SubtractiveBlending',
+      "blending": 'AdditiveBlending',
       "transparent":true,
       "depthWrite":false,
     },
-    "scale":[{"uniform3d":1}],
+    "scale":[{"uniform3d":()=>Sync.get('Particle:scale2', 1)}],
     "instancer": {
       "sort": false,
       "count": particles.length,
@@ -180,7 +180,9 @@ Demo.prototype.addEffectParticleShape = function ()
         let object = properties.object;
         let color = properties.color;
 
-        let scale = particleSize;
+        const beatings = 1.0+((getBeatValue()/4.0)%1.0);
+
+        let scale = particleSize*beatings;
 
         const particle = particles[i];
 
@@ -188,15 +190,23 @@ Demo.prototype.addEffectParticleShape = function ()
         object.scale.y = scale;
         object.scale.z = scale;
 
-        object.position.x = particle.x;
-        object.position.y = particle.y;
+        object.position.x = particle.x + Math.sin(particle.x+time*0.05);
+        object.position.y = particle.y + Math.cos(particle.x+time*0.015)*0.1;
         object.position.z = particle.z;
+
+
+        const shake = Sync.get('Particle:shake', 0.0);
+        if (shake > 0.0) {
+          object.position.x += Utils.random()*shake-shake/2;
+          object.position.y += Utils.random()*shake-shake/2;
+          object.position.z += Utils.random()*shake-shake/2;
+        }
 
 
         color.r = particle.color.r;
         color.g = particle.color.g;
         color.b = particle.color.b;
-        color.a = particle.color.a;
+        color.a = particle.color.a*Sync.get('Particle:alpha', 1);
 
         }
       }
@@ -529,7 +539,7 @@ Demo.prototype.addEffectOuterText = function (options) {
       text:{
       string:text,
       name:'font/ShareTechMono-Regular.ttf',
-      parameters: {size:20,depth:0.5,bevelEnabled:true,bevelThickness:0.01,bevelSize:0.01,bevelSegments:1}
+      parameters: {size:20,depth:1.0,bevelEnabled:true,bevelThickness:0.01,bevelSize:0.01,bevelSegments:1}
       },
       perspective:'3d',
       position:{
@@ -651,7 +661,7 @@ Demo.prototype.addEffectOuterPlanes = function () {
           depthWrite: false,
           //blending: 'AdditiveBlending',
           bumpMap: 'sceneAbstract/bumpmap.png',
-          bumpScale: 8.0
+          bumpScale: 4.0
         },
         scale: {
           uniform3d: () => Sync.get(syncPrefix + 'scale', 1.0) + Math.sin((i+j)/10.0+getBeatValue2())*0.02
@@ -711,7 +721,7 @@ Demo.prototype.addEffectCube = function () {
           object: null,
           parent: id,
           scale:{
-            uniform3d: () => Sync.get(syncPrefix + 'scale', 0.99)
+            uniform3d: () => Sync.get('Cube:smallScale', 1.0) * Sync.get(syncPrefix + 'scale', 0.99)
           },
           position: {
             x:()=>Sync.get(syncPrefix + 'posX', 0)+x*cubeSize-(cubeSize),
@@ -1192,7 +1202,9 @@ void drawBoard()
 
   //this.addEffectLaser();
   this.addEffectTunnel();
-  //this.addEffectParticleShape();
+  this.addEffectTunnel3();
+  this.addEffectTunnel2();
+  this.addEffectParticleShape();
   this.addEffectColorParticleShape();
 
 

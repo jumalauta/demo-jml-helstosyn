@@ -123,7 +123,7 @@ Demo.prototype.setScene = function (sceneName) {
 const settings = new Settings();
 
 
-settings.engine.preload = false;
+settings.engine.preload = true;
 settings.demo.renderer.sortObjects = false;
 settings.demo.renderer.logarithmicDepthBuffer = false;
 settings.demo.sync.rocketFile = 'sync/demo.rocket';
