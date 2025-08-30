@@ -1,6 +1,9 @@
 Demo.prototype.sceneIntro = function () {
   //this.setScene('abstract');
   this.setScene('intro');
+
+  //return;
+
 //return;
   /*this.loader.addAnimation({
     "light": {
@@ -212,4 +215,110 @@ Demo.prototype.sceneIntro = function () {
   addFadePlane({row: 0, x: () => Sync.get('Intro:slidePlane1',getSceneTimeFromStart()/1.0)});
   addFadePlane({row: 1, x: () => Sync.get('Intro:slidePlane2',getSceneTimeFromStart()/1.0-0.5)});
   addFadePlane({row: 2, x: () => Sync.get('Intro:slidePlane3',getSceneTimeFromStart()/1.0-1.0)});
+};
+
+
+Demo.prototype.sceneOverlay = function () {
+  //this.setScene('abstract');
+  this.setScene('overlay');
+
+  //return;
+
+//return;
+  /*this.loader.addAnimation({
+    "light": {
+        "type": "Ambient",
+        "properties": { "intensity": 1.0 },
+    }
+  });
+*/
+  this.loader.addAnimation({
+    "light": {
+        "type": "Directional",
+        "properties": { "intensity": 10.0 },
+        "castShadow": false
+    }
+    ,position:[{x:-3,y:5,z:3}]
+  });
+
+    const rows = 20;
+    const cols = 40;
+    const particles = new Array(rows*cols);
+    for (let i = 0; i < particles.length; i++) {
+        particles[i] = {
+            x: Utils.random() * 300.0 - 150.0,
+            y: Utils.random() * 300.0 - 150.0,
+            z: Utils.random() * 300.0 - 150.0,
+        };
+    }
+
+    this.loader.addAnimation({
+        start: 10,
+        visible:()=>Sync.get('Intro:xWallVis', 1.0) < 1.0 ? false : true,
+        text:{
+            string:'X',
+            name:'font/ShareTechMono-Regular.ttf',
+            parameters: {size:30,depth:0.5,bevelEnabled:true,bevelThickness:0.01,bevelSize:0.01,bevelSegments:1}
+        },
+        perspective:'3d',
+        position:{
+            x:0,
+            y:0,
+            z:-1,
+        },
+        color:{
+            r: 1,
+            g: 1,
+            b: 1,
+            a: 0.25
+        },
+        instancer: {
+        sort: false,
+        count: particles.length,
+        runInstanceFunction: (properties) => {
+  
+          const i = properties.index;
+          const count = properties.count;
+          const time = properties.time;
+          let object = properties.object;
+          let color = properties.color;
+  
+          let scale = 0.0;
+
+          const particle = particles[i];
+
+          const bpm = 135.0;
+          const beat = time * bpm / 60.0;
+          if (beat % 1.0 < 0.5) {
+            const pulse = Math.floor(time*4.0);
+            Utils.setSeed(Math.floor(i + pulse ^ Math.floor((particle.x - particle.y)*100.0)));
+            scale = Utils.random() < 0.25*(Math.min(pulse/50.0, 1.0)) ? 1.0 : 0.0;
+          }
+
+
+          object.scale.x = scale;
+          object.scale.y = scale;
+          object.scale.z = scale;
+  
+          object.position.x = particle.x;
+          object.position.y = particle.y;
+          object.position.z = particle.z;
+          }
+        }
+    });
+
+
+  this.loader.addAnimation({
+    start: 10,
+    image: '_embedded/defaultWhite.png',
+    visible:()=>Sync.get('Intro:flowPlaneVis', 1.0) < 1.0 ? false : true,
+    color:{
+        r:1,g:1,b:1,a:0.4
+    },
+    shader:{
+        name: 'sceneIntro/randomFlow.fs'
+    }
+    //scale:{y:0.1},
+  });
+
 };

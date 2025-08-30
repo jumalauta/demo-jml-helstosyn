@@ -1,22 +1,3 @@
-/*
-CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0/
-
-With following licensing exceptions:
-https://commons.wikimedia.org/wiki/File:Drazki_type_torpedo-boad.jpg
-https://commons.wikimedia.org/wiki/File:Pipe_Schematics_-_Esso_Gettysburg,_Suisun_Bay_Reserve_Fleet,_Benicia,_Solano_County,_CA_HAER_CA-354_(sheet_2_of_2).png
-https://commons.wikimedia.org/wiki/File:Type_VIIC_U-boat_schematic_drawing.png
-https://commons.wikimedia.org/wiki/File:%22Maximum_Battleship%22_Design_2.jpg
-
-https://fonts.google.com/specimen/Courier+Prime/license
-https://fonts.google.com/specimen/Share+Tech+Mono/license
-
-tex_milky_way.png is based on
-https://commons.wikimedia.org/wiki/File:ESO_-_Milky_Way.jpg
-by ESO/S. Brunier
-Image colors have been modified and there is self-crossfading
-*/
-
-
 const deg2rad = 0.01745329251;
 window.camPos = [0.0,0.0,0.0];
 window.camPosLength = 1.0;
@@ -163,8 +144,6 @@ settings.demo.fbo.color.texture.magFilter = 'NearestFilter';
 //settings.demo.fbo.color.texture.wrapS = 'RepeatWrapping';
 //settings.demo.fbo.color.texture.wrapT = 'RepeatWrapping';
 
-
-
 Demo.prototype.init = function () {
   const start = 0;
   const duration = 380;
@@ -176,6 +155,7 @@ Demo.prototype.init = function () {
   //return;
   this.sceneAbstract();
   this.sceneIntro();
+  this.sceneOverlay();
 
   //this.addSongTitle();
   //this.addSmileys();
@@ -207,6 +187,7 @@ Demo.prototype.init = function () {
     {start: 4*window.pattern, duration: 51*window.pattern, name: 'abstract', dof:false, polaroid:false},
     {start: 0*window.pattern, duration: 5*window.pattern, name: 'intro', dof:false, polaroid:false},
     {start: 52.0*window.pattern, duration: 4*window.pattern, name: 'intro', dof:false, polaroid:false},
+    {start: 4*window.pattern, duration: 51*window.pattern, name: 'overlay', dof:false, polaroid:false},
     //{start: 0*window.pattern, duration: 9.25*window.pattern, name: 'intro', dof:true, polaroid:false},
     //{start: 9.25*window.pattern, duration: 4*window.pattern, name: 'angered', dof:true, polaroid:false},
     //{start: 13.25*window.pattern, duration: 2*window.pattern, name: 'agod', dof:true, polaroid:false},
@@ -248,7 +229,6 @@ Epic battles*/
             this.loader.addAnimation({start: scene.start, duration: scene.duration, color:scene.color, image: scene.name + 'Fbo.color.fbo'});
         }
     });
-    return;
 
   this.loader.addAnimation({fbo:{name:'screenDof',action:'begin',storeDepth:false}});
     scenes.forEach((scene) => {

@@ -1,3 +1,52 @@
+
+function calcBeatValue() {
+  const bpm = 135.0;
+  const beat = getSceneTimeFromStart() * bpm / 60.0;
+  window.demoBeatValue2 = Math.floor(beat);
+
+  if (beat % 1.0 < 0.5) {
+    const flooredBeat = Math.floor(beat*2.0);
+    window.demoEvenBeatValue = Math.floor(beat/4.0);
+    return flooredBeat;
+  } else {
+    window.demoEvenBeatValue = Math.floor(beat/4.0);
+  }
+
+  return beat*2.0;
+};
+
+function getEvenBeatValue() {
+  return window.demoEvenBeatValue || 0;
+}
+
+function getBeatValue() {
+  return window.demoBeatValue;
+}
+
+function getBeatValue2() {
+  return window.demoBeatValue2 || 0;
+}
+
+
+Demo.prototype.addUnderlay = function () {
+  this.loader.addAnimation({
+    duration:182.5,
+    image: 'esso_gettysburg_1.png',
+    color:[{r:1,g:1,b:1,a:0},{duration:25, a:()=>Sync.get('Background:skyColor')/2.0}],
+    position:{x:0, y:()=>Math.sin(0.345+getSceneTimeFromStart()*0.05)*0.25},
+    additive:true,
+    scale:{uniform2d:1.5}
+  });
+  this.loader.addAnimation({
+    duration:182.5,
+    image: 'esso_gettysburg_2.png',
+    color:[{r:1,g:1,b:1,a:0},{duration:25, a:()=>Sync.get('Background:skyColor')/2.0}],
+    position:{x:()=>Math.sin(getSceneTimeFromStart()*0.05)*0.25,y:0},
+    additive:true,
+    scale:{uniform2d:1.5}
+  });
+};
+
 Demo.prototype.addEffectParticleShape = function ()
 {
   const amountOfParticles = 200;
@@ -132,6 +181,163 @@ Demo.prototype.addEffectParticleShape = function ()
         let color = properties.color;
 
         let scale = particleSize;
+
+        const particle = particles[i];
+
+        object.scale.x = scale;
+        object.scale.y = scale;
+        object.scale.z = scale;
+
+        object.position.x = particle.x;
+        object.position.y = particle.y;
+        object.position.z = particle.z;
+
+
+        color.r = particle.color.r;
+        color.g = particle.color.g;
+        color.b = particle.color.b;
+        color.a = particle.color.a;
+
+        }
+      }
+    
+  });
+};
+
+Demo.prototype.addEffectColorParticleShape = function ()
+{
+  const amountOfParticles = 40;
+  const texture = 'multiSceneEffects/tex_darkParticle.png';
+  const particleSize = 3.0;
+  const x = 0;
+  const y = 0;
+  let z = 0;
+  const speed = 1.0;
+  const directionFlip = 0.0;
+  const highlight = false;
+
+  const radius = 5;
+
+  const recalcThreshold = 0.1;
+
+  let particles = new Array(amountOfParticles);
+  for (let i = 0; i < particles.length; i++) {
+
+    /*const color = [
+      {r:1.0,g:0.0,b:0.0},
+      {r:0.0,g:1.0,b:0.0},
+      {r:0.0,g:0.0,b:1.0},
+    ][Math.floor(Utils.random()*3)];
+    const direction = [
+      Utils.random()*radius-radius/2,
+      Utils.random()*radius-radius/2,
+      Utils.random()*radius-radius/2,
+    ];
+    particles[i] = {
+      x: direction[0],
+      y: direction[1],
+      z: direction[2],
+      color: {
+        r: color.r,
+        g: color.g,
+        b: color.b,
+        a: 1.0//Utils.random()
+      }
+    };*/
+
+    // Cube shape
+
+    const direction = [
+      Utils.random()*radius-radius/2,
+      Utils.random()*radius-radius/2,
+      Utils.random()*radius-radius/2,
+    ];
+    const dir = Utils.getRandomArrayIndex(direction);
+    direction[dir] = radius/2 * (Utils.random() < 0.5 ? -1 : 1);
+    //direction[(dir+1)%3] = radius/2 * (Utils.random() < 0.5 ? -1 : 1);
+    particles[i] = {
+      x: direction[0],
+      y: direction[1],
+      z: direction[2],
+      color: {
+        r: dir===0?1:0,
+        g: dir===1?1:0,
+        b: dir===2?1:0,
+        a: 1.0//Utils.random()
+      }
+    };
+
+    // Sphere shape
+    /*const theta = Utils.random() * Math.PI * 2;
+    const phi = Utils.random() * Math.PI;
+    const r = radius;// * Math.cbrt(Utils.random());
+
+    particles[i] = {
+      x: r * Math.sin(phi) * Math.cos(theta),
+      y: r * Math.sin(phi) * Math.sin(theta),
+      z: r * Math.cos(phi),
+      color: {
+        r: 1.0,
+        g: 1.0,
+        b: 1.0,
+        a: 1.0
+      }
+    };*/
+
+    // Disc shape
+
+    /*const outerRadius = radius;
+    const innerRadius = radius * 0.5;
+
+    const angle = (Utils.random()) * Math.PI * 2;
+    const deltaRadius = Utils.random() * (outerRadius - innerRadius) + innerRadius
+    particles[i] = {
+      x: Math.cos(angle) * deltaRadius,
+      y: Math.sin(angle) * deltaRadius,
+      z: 0,
+      color: {
+        r: 1.0,
+        g: 1.0,
+        b: 1.0,
+        a: 1.0
+      }
+    };*/
+
+  }
+
+  //z = -50;
+  this.loader.addAnimation({
+    "image": texture,
+    //textureProperties: [{},{minFilter: 'NearestMipmapNearestFilter', magFilter: 'LinearFilter'}],
+    //"parent":parentId,
+    visible: () => Sync.get('Particle:vis', 0) < 1 ? false : true,
+    "position":[{
+      "x":x,
+      "y":y,
+      "z":z,
+    }],
+    "angle":[{"degreesY":180,degreesZ:()=>getSceneTimeFromStart()*500.0}],
+    "perspective": "3d",
+    "billboard": true,
+    "additive": true,
+    "material":{
+      "blending": 'SubtractiveBlending',
+      "transparent":true,
+      "depthWrite":false,
+    },
+    "scale":[{"uniform3d":1}],
+    "instancer": {
+      "sort": false,
+      "count": particles.length,
+      "runInstanceFunction": (properties) => {
+
+        const i = properties.index;
+        const count = properties.count;
+        const time = properties.time;
+        let object = properties.object;
+        let color = properties.color;
+
+        let scale = particleSize * Sync.get('Particle:scale', 1);
 
         const particle = particles[i];
 
@@ -402,9 +608,27 @@ Demo.prototype.addEffectOuterPlanes = function () {
     }
   ];
 
+
   for(let j = 0; j < shapes.length; j++) {
     const shape = shapes[j];
     for (let i = 0; i < 6; i++) {
+
+      const degXFinal = Utils.random() * 360 * 5;
+      const degYFinal = Utils.random() * 360 * 5;
+      const degZFinal = Utils.random() * 360 * 5;
+      const rotRingFn = (coord)  => {
+        const percent = getSceneTimeFromStart() / 100.0;
+        const eventBeat = getEvenBeatValue() * 25;
+
+        if (coord == 'x') {
+          return percent * degXFinal + eventBeat;
+        } else if (coord == 'y') {
+          return percent * degYFinal + eventBeat;
+        } else {
+          return percent * degZFinal + eventBeat;
+        }
+      };
+
       const syncPrefix = `OuterPlane:${j}_${i}_`;
       this.loader.addAnimation({
         parent: id,
@@ -425,11 +649,12 @@ Demo.prototype.addEffectOuterPlanes = function () {
           metalness: 0.3,
           transparent: true,
           depthWrite: false,
-          //bumpMap: 'sceneAbstract/bumpmap.png',
-          //bumpScale: 8.0
+          //blending: 'AdditiveBlending',
+          bumpMap: 'sceneAbstract/bumpmap.png',
+          bumpScale: 8.0
         },
         scale: {
-          uniform3d: () => Sync.get(syncPrefix + 'scale', 1.0)
+          uniform3d: () => Sync.get(syncPrefix + 'scale', 1.0) + Math.sin((i+j)/10.0+getBeatValue2())*0.02
         },
         position: {
           x:Sync.get(syncPrefix + 'posX', -0.0),
@@ -437,9 +662,9 @@ Demo.prototype.addEffectOuterPlanes = function () {
           z:Sync.get(syncPrefix + 'posZ', -0.0)
         },
         angle: {
-          degreesX: ()=>Sync.get(syncPrefix + 'degX', 0.0),
-          degreesY: ()=>Sync.get(syncPrefix + 'degY', 0.0),
-          degreesZ: ()=>Sync.get(syncPrefix + 'degZ', 0.0)
+          degreesX: () => rotRingFn('x'),
+          degreesY: () => rotRingFn('y'),
+          degreesZ: () => rotRingFn('z')
         }
       });
     }
@@ -529,6 +754,17 @@ ${this.getDiscarderShader()}
 };
 
 Demo.prototype.addEffectDeformSphere = function () {
+
+  const defFacFn = (coord)  => {
+    return 20.0 + (Math.sin(getBeatValue()) + 1.0)*0.5;
+  };
+  const defScaFn = (coord)  => {
+    return 0.0 + (Math.sin(getBeatValue()) + 1.0)*0.2;
+  };
+  const defMovFn = (coord)  => {
+    return getBeatValue();
+  };
+
   this.loader.addAnimation({
     object: null,
     visible: () => Sync.get('Sphere:vis', 0) < 1 ? false : true,
@@ -573,19 +809,19 @@ ${this.getDiscarderShader()}
         variable:[
           {name:'beatSync', value:[() => Sync.get('Sphere:beatSync', 0.1)]},
           {name:'deformFactor', value:[
-            () => Sync.get('Sphere:defFacX', 0.0),
-            () => Sync.get('Sphere:defFacY', 0.0),
-            () => Sync.get('Sphere:defFacZ', 0.0)
+            () => Sync.get('Sphere:defFacX', 0.0) * defFacFn(),
+            () => Sync.get('Sphere:defFacY', 0.0) * defFacFn(),
+            () => Sync.get('Sphere:defFacZ', 0.0) * defFacFn()
           ]},
           {name:'deformScale', value:[
-            () => Sync.get('Sphere:defScaX', 0.1),
-            () => Sync.get('Sphere:defScaY', 0.1),
-            () => Sync.get('Sphere:defScaZ', 0.1)
+            () => Sync.get('Sphere:defScaX', 0.0) * defScaFn(),
+            () => Sync.get('Sphere:defScaX', 0.0) * defScaFn(),
+            () => Sync.get('Sphere:defScaX', 0.0) * defScaFn()
           ]},
           {name:'deformMove', value:[
-            () => Sync.get('Sphere:defMovX', 0.0),
-            () => Sync.get('Sphere:defMovY', 0.0),
-            () => Sync.get('Sphere:defMovZ', 0.0)
+            () => Sync.get('Sphere:defMovX', 0.0) + defMovFn(),
+            () => Sync.get('Sphere:defMovY', 0.0) + defMovFn(),
+            () => Sync.get('Sphere:defMovZ', 0.0) + defMovFn()
           ]}
         ]
     },
@@ -941,18 +1177,24 @@ void drawBoard()
     //visible:false,
         cubeMap: {name:'cube1'},
     position:{x:0,y:0,z:0},
+    runFunction: () => {
+      window.demoBeatValue = calcBeatValue();
+    }
   });
 
   this.addEffectBackground();
+  this.addUnderlay();
 
   this.addEffectDeformSphere();
   this.addEffectCube();
   this.addEffectOuterPlanes();
   this.addEffectOuterText();
 
-  this.addEffectLaser();
+  //this.addEffectLaser();
   this.addEffectTunnel();
-  this.addEffectParticleShape();
+  //this.addEffectParticleShape();
+  this.addEffectColorParticleShape();
+
 
   return;
 
